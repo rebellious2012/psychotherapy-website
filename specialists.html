@@ -141,7 +141,7 @@
                 <div class="flex items-center space-x-3">
                     <img src="logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
                     <span class="text-xl md:text-2xl font-bold text-accent-gold">
-                        Центр психотерапии
+                        Center für Coaching
                     </span>
                 </div>
                 
@@ -233,7 +233,7 @@
                             </div>
                             <div>
                                 <span class="text-accent-gold font-semibold">Образование:</span>
-                                <span class="text-white"> МГУ, факультет психологии</span>
+                                <span class="text-white"> ДГУ, факультет психологии</span>
                             </div>
                             <div>
                                 <span class="text-accent-gold font-semibold">Специализация:</span>
@@ -645,47 +645,6 @@
             </div>
         </section>
 
-        <!-- Contact Form Section -->
-        <section class="py-16 px-4 bg-black/20">
-            <div class="container mx-auto max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-accent-gold">
-                    Записаться на консультацию
-                </h2>
-                
-                <form class="bg-black/30 rounded-lg p-8 shadow-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-white mb-2">Имя *</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-accent-gold">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-white mb-2">E-Mail *</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-accent-gold">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <label for="specialist" class="block text-sm font-medium text-white mb-2">Выберите специалиста</label>
-                        <select id="specialist" name="specialist" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent-gold">
-                            <option value="">Любой доступный специалист</option>
-                            <option value="maxim">Максим Журин - Руководитель центра, психолог</option>
-                            <option value="rafael">Рафаэль Бисалиев - Врач-психиатр, психотерапевт, нарколог</option>
-                            <option value="tamila">Тамила Цымбалюк - Магистр психологии, сексолог</option>
-                            <option value="victoria">Виктория Постна - Дипломированный психолог, коуч-ментор</option>
-                        </select>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <label for="message" class="block text-sm font-medium text-white mb-2">Сообщение *</label>
-                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-accent-gold" placeholder="Опишите вашу ситуацию или вопросы..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="w-full bg-accent-gold text-primary-bg px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">
-                        ОТПРАВИТЬ ЗАЯВКУ
-                    </button>
-                </form>
-            </div>
-        </section>
     </main>
 
     <!-- Modal for certificate viewing -->
@@ -741,29 +700,7 @@
     </footer>
 
     <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-
-        mobileMenuBtn?.addEventListener('click', () => {
-            mobileMenu.classList.add('open');
-        });
-
-        mobileMenuClose?.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-        });
-
-        // Accordion functionality for mobile menu
-        document.querySelectorAll('.accordion-trigger').forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const content = trigger.nextElementSibling;
-                const icon = trigger.querySelector('svg');
-                
-                content.classList.toggle('open');
-                icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
-            });
-        });
+      
 
         // Modal functionality for certificates
         function openModal(imageSrc) {
@@ -792,6 +729,7 @@
             }
         });
     </script>
+    <script src="main.js" defer></script>
     <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>

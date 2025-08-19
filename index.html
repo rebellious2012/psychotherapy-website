@@ -14,20 +14,7 @@
                         'primary-bg': '#2D1B14',
                         'accent-gold': '#FFD700',
                         'text-secondary': '#B0B0B0',
-                        'nav-home': '#4CAF50',
-                        'nav-specialists': '#00BCD4',
-                        'nav-contacts': '#2196F3',
-                        'nav-psychiatrist': '#FF9800',
-                        'nav-psychologist': '#9C27B0',
-                        'nav-psychotherapy': '#009688',
-                        'nav-alcohol': '#E91E63',
-                        'nav-expertise': '#673AB7',
-                        'nav-coaching': '#FF5722',
-                        'nav-mobbing': '#4CAF50',
-                        'nav-sexual': '#F44336',
-                        'nav-branches': '#03A9F4',
-                        'nav-careers': '#F44336',
-                        'nav-impressum': '#8BC34A'
+                     
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif']
@@ -74,7 +61,7 @@
                 <div class="flex items-center space-x-3">
                     <img src="logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
                     <span class="text-xl md:text-2xl font-bold text-accent-gold">
-                        Центр психотерапии
+                        Center für Coaching
                     </span>
                 </div>
                 
@@ -388,45 +375,6 @@
         </div>
     </section>
     
-    <!-- Contact Form Section -->
-    <section class="py-16 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-accent-gold">
-                Связаться с нами
-            </h2>
-            
-            <div class="bg-black/20 rounded-lg p-8 shadow-lg">
-                <form id="contact-form" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-semibold mb-2">Имя *</label>
-                            <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 rounded-lg bg-primary-bg border border-accent-gold/30 text-white focus:border-accent-gold focus:outline-none">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-semibold mb-2">E-Mail *</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 rounded-lg bg-primary-bg border border-accent-gold/30 text-white focus:border-accent-gold focus:outline-none">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label for="message" class="block text-sm font-semibold mb-2">Сообщение *</label>
-                        <textarea id="message" name="message" rows="5" required 
-                                  class="w-full px-4 py-3 rounded-lg bg-primary-bg border border-accent-gold/30 text-white focus:border-accent-gold focus:outline-none resize-vertical"></textarea>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button type="submit" 
-                                class="bg-accent-gold text-primary-bg px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ОТПРАВИТЬ ЗАЯВКУ
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-    
     <!-- Footer -->
     <footer class="bg-black/30 py-12 px-4 border-t border-accent-gold/20">
         <div class="container mx-auto max-w-6xl">
@@ -473,120 +421,8 @@
         </div>
     </footer>
     
-    <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('open');
-        });
-        
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.remove('open');
-            }
-        });
-        
-        // Mobile accordion functionality
-        document.querySelectorAll('.accordion-trigger').forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const content = trigger.nextElementSibling;
-                const icon = trigger.querySelector('svg');
-                
-                content.classList.toggle('open');
-                icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
-            });
-        });
-        
-        // FAQ accordion functionality
-        document.querySelectorAll('.faq-trigger').forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const allItems = document.querySelectorAll('.faq-item');
-                const content = trigger.nextElementSibling;
-                const icon = trigger.querySelector('svg');
-                const parentItem = trigger.parentElement;
-                const isOpen = parentItem.classList.contains('open');
-
-                // Close all other items
-                allItems.forEach(item => {
-                    if (item !== parentItem) {
-                        item.classList.remove('open');
-                        item.querySelector('.faq-content').classList.remove('open');
-                        item.querySelector('.faq-trigger svg').style.transform = 'rotate(0deg)';
-                    }
-                });
-
-                // Toggle the clicked item
-                parentItem.classList.toggle('open');
-                content.classList.toggle('open');
-                if (content.classList.contains('open')) {
-                    icon.style.transform = 'rotate(180deg)';
-                } else {
-                    icon.style.transform = 'rotate(0deg)';
-                }
-            });
-        });
-        
-        // Contact form functionality
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const formData = new FormData(e.target);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            
-            // Simple validation
-            if (!name || !email || !message) {
-                alert('Пожалуйста, заполните все обязательные поля');
-                return;
-            }
-            
-            // Simulate form submission
-            alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
-            e.target.reset();
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
-    <script>
-        // JavaScript функция для открытия WhatsApp
-function openWhatsApp() {
-    // Номер телефона (без + и пробелов)
-    const phoneNumber = "491788079318";
-    
-    // Готовое сообщение
-    const message = encodeURIComponent(
-        "Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. " +
-        "Подскажите, пожалуйста, как можно записаться на ближайшее время?"
-    );
-    
-    // Формируем ссылку
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    
-    // Открываем WhatsApp
-    window.open(whatsappUrl, '_blank');
-}
-    </script>
+    <script src="main.js" defer></script>
+   
     <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
