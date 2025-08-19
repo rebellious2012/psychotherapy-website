@@ -822,68 +822,47 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-bg border-t border-accent-gold/20 py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="md:col-span-2">
-                    <h3 class="text-2xl font-bold text-accent-gold mb-4">
-                        Центр психотерапии
-                    </h3>
+    <footer class="bg-black/30 py-12 px-4 border-t border-accent-gold/20">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-accent-gold">Центр психотерапии</h3>
                     <p class="text-text-secondary mb-4">
-                        Профессиональная психологическая помощь в Германии. 15 филиалов в крупнейших городах страны.
+                        Профессиональная психологическая помощь с 2001 года
                     </p>
-                    <div class="space-y-2">
-                        <div class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span class="text-text-secondary">Sternstraße 105, 20357 Hamburg</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            <span class="text-text-secondary">info777institut@gmail.com</span>
-                        </div>
+                    <p class="text-sm text-text-secondary">
+                        Sternstraße. 105 ,20357 Hamburg , Deutschland
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Контакты</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>WhatsApp: +491788079318</p>
+                        <p>Email: info777institut@gmail.com</p>
+                        <p>Режим работы: Пн-Сб 9:00-21:00</p>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Быстрые ссылки</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index" class="text-text-secondary hover:text-accent-gold transition-colors">Главная</a></li>
-                        <li><a href="#" class="text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a></li>
-                        <li><a href="#" class="text-text-secondary hover:text-accent-gold transition-colors">Услуги</a></li>
-                        <li><a href="branches" class="text-text-secondary hover:text-accent-gold transition-colors">Филиалы</a></li>
-                        <li><a href="#" class="text-text-secondary hover:text-accent-gold transition-colors">Контакты</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Услуги</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-text-secondary hover:text-accent-gold transition-colors">Психотерапия</a></li>
-                        <li><a href="#" class="text-text-secondary hover:text-accent-gold transition-colors">Консультации психолога</a></li>
-                        <li><a href="#" class="text-text-secondary hover:text-accent-gold transition-colors">Коучинг</a></li>
-                        <li><a href="#" class="text-text-secondary hover:text-accent-gold transition-colors">Семейная терапия</a></li>
-                        <li><a href="#" class="text-text-secondary hover:text-accent-gold transition-colors">Помощь при моббинге</a></li>
-                    </ul>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
+                    <div class="space-y-2">
+                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
+                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="border-t border-accent-gold/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-text-secondary text-sm">
-                    © 2024 Центр психотерапии. Все права защищены. Руководитель: Dipl.- Psychologe Maksym Zhurin
+            <div class="border-t border-accent-gold/20 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 Центр системной психотерапии и феменологического коучинга.
+                    Руководитель: Dipl.- Psychologe Maksym Zhurin
                 </p>
-                <div class="mt-4 md:mt-0">
-                    <a href="https://codelevator.top" target="_blank" class="text-text-secondary hover:text-accent-gold transition-colors text-sm">
-                        Разработка: goodcode.pp.ua
-                    </a>
-                </div>
+                <p class="text-sm text-text-secondary mt-2">
+                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                </p>
             </div>
         </div>
     </footer>
