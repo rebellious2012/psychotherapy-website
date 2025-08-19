@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кодирование от алкоголизма в Германии - Центр психотерапии и системного коучинга</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .hero-bg {
+            background-image: url('../hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
+                    <span class="text-xl md:text-2xl font-bold text-accent-gold">
+                        Центр психотерапии
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="../index.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
+                    <a href="../specialists.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши специалисты</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
+                            <span>Услуги</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="p-2">
+                                <a href="psychiatrist.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации клинического психолога онлайн ОНЛАЙН</a>
+                                <a href="psychologist.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации психолога ОНЛАЙН</a>
+                                <a href="psychotherapy.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия ОНЛАЙН</a>
+                                <a href="alcohol-coding.html" class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Кодирование от алкоголизма в Германии</a>
+                                <a href="expertise.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Клинико-психологическая экспертиза</a>
+                                <a href="coaching.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации коуча ОНЛАЙН</a>
+                                <a href="mobbing.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь при моббинге</a>
+                                <a href="sexual-therapy.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия сексуальных расстройств</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="../branches.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
+                    <a href="../vacancies.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
+                    <a href="../contact.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
+                    <a href="../impressum.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden fixed top-16 right-0 w-80 h-screen bg-black/95 backdrop-blur-sm transform translate-x-full transition-transform duration-300 overflow-y-auto">
+            <div class="p-4 space-y-2">
+                <a href="../index.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
+                <a href="../specialists.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши специалисты</a>
+                
+                <!-- Mobile Services Accordion -->
+                <div class="border border-yellow-400/60 rounded-lg">
+                    <button id="mobile-services-btn" class="w-full px-4 py-3 bg-yellow-400/20 text-yellow-400 rounded-lg flex items-center justify-between">
+                        <span>Услуги</span>
+                        <svg id="mobile-services-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobile-services-menu" class="hidden px-2 pb-2 space-y-1">
+                        <a href="psychiatrist.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации клинического психолога онлайн ОНЛАЙН</a>
+                        <a href="psychologist.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации психолога ОНЛАЙН</a>
+                        <a href="psychotherapy.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
+                        <a href="alcohol-coding.html" class="block px-4 py-2 rounded bg-yellow-400/20 text-yellow-400">Кодирование от алкоголизма в Германии</a>
+                        <a href="expertise.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Клинико-психологическая экспертиза</a>
+                        <a href="coaching.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации коуча ОНЛАЙН</a>
+                        <a href="mobbing.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь при моббинге</a>
+                        <a href="sexual-therapy.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия сексуальных расстройств</a>
+                    </div>
+                </div>
+                
+                <a href="../branches.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Филиалы</a>
+                <a href="../vacancies.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Вакансии</a>
+                <a href="../contact.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Контакты</a>
+                <a href="../impressum.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Impressum</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="pt-20 pb-4 bg-[#2D1B14]">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm">
+                <ol class="flex items-center space-x-2 text-gray-400">
+                    <li><a href="../index.html" class="hover:text-yellow-400 transition-colors">Главная</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li><span class="text-gray-500">Услуги</span></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li><span class="text-yellow-400">Кодирование от алкоголизма в Германии</span></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative min-h-[60vh] flex items-center">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                    Кодирование от алкоголизма в Германии
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                    Эффективные методы лечения алкогольной зависимости. Медикаментозное и психологическое кодирование с долгосрочным результатом.
+                </p>
+                <a href="#contact-form" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+                    ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="bg-[#2D1B14] py-16">
+        <div class="container mx-auto px-4">
+            <!-- Service Description -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">О процедуре кодирования</h2>
+                    <div class="prose prose-lg text-gray-300 space-y-6">
+                        <p>
+                            Кодирование от алкоголизма — это комплексный метод лечения алкогольной зависимости, который включает медикаментозную терапию и психологическое воздействие. В нашем центре применяются современные и безопасные методы кодирования, одобренные европейскими медицинскими стандартами.
+                        </p>
+                        <p>
+                            Процедура проводится квалифицированными врачами-наркологами с многолетним опытом работы. Мы используем индивидуальный подход к каждому пациенту, учитывая стадию заболевания, общее состояние здоровья и личные особенности.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Methods -->
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Методы кодирования</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-black/30 p-8 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4 text-white">Медикаментозное кодирование</h3>
+                            <p class="text-gray-300 mb-4">
+                                Введение препаратов, блокирующих расщепление алкоголя в организме. При употреблении алкоголя возникают неприятные физические реакции.
+                            </p>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• Дисульфирам (Антабус)</li>
+                                <li>• Налтрексон</li>
+                                <li>• Вивитрол (пролонгированная форма)</li>
+                                <li>• Срок действия: от 6 месяцев до 3 лет</li>
+                            </ul>
+                        </div>
+                        <div class="bg-black/30 p-8 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4 text-white">Психологическое кодирование</h3>
+                            <p class="text-gray-300 mb-4">
+                                Формирование устойчивого отвращения к алкоголю через психотерапевтические методы и гипнотическое воздействие.
+                            </p>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• Метод Довженко</li>
+                                <li>• Эриксоновский гипноз</li>
+                                <li>• НЛП-техники</li>
+                                <li>• Срок действия: от 1 года до 5 лет</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Этапы процедуры</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Предварительная консультация</h3>
+                                <p class="text-gray-300">Осмотр врача-нарколога, сбор анамнеза, оценка состояния здоровья и выбор метода кодирования.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Подготовительный период</h3>
+                                <p class="text-gray-300">Воздержание от алкоголя минимум 3-7 дней, детоксикация организма, сдача анализов.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Процедура кодирования</h3>
+                                <p class="text-gray-300">Введение препарата или проведение психотерапевтического сеанса в стерильных условиях.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Наблюдение и поддержка</h3>
+                                <p class="text-gray-300">Регулярные консультации, психологическая поддержка, контроль состояния здоровья.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits -->
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Преимущества нашего центра</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Лицензированные врачи</h3>
+                            <p class="text-gray-300">Все процедуры проводят сертифицированные наркологи с опытом работы более 10 лет</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Быстрый результат</h3>
+                            <p class="text-gray-300">Эффект наступает сразу после процедуры и сохраняется на весь период кодирования</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Безопасность</h3>
+                            <p class="text-gray-300">Используем только сертифицированные препараты европейского производства</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Конфиденциальность</h3>
+                            <p class="text-gray-300">Полная анонимность лечения, соблюдение врачебной тайны</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Комплексный подход</h3>
+                            <p class="text-gray-300">Сочетание медикаментозного лечения с психологической поддержкой</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Гарантия качества</h3>
+                            <p class="text-gray-300">Предоставляем гарантию на все виды кодирования с возможностью повторной процедуры</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">Стоимость кодирования</h2>
+                    <div class="bg-black/30 p-8 rounded-lg border border-yellow-400/20">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4 text-white">Медикаментозное кодирование</h3>
+                                <p class="text-3xl font-bold text-yellow-400 mb-2">€350-650</p>
+                                <p class="text-gray-300">В зависимости от препарата и срока действия</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4 text-white">Психологическое кодирование</h3>
+                                <p class="text-3xl font-bold text-yellow-400 mb-2">€250-450</p>
+                                <p class="text-gray-300">В зависимости от метода и количества сеансов</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mt-6">В стоимость включены: консультация врача, обследование, процедура кодирования и наблюдение в течение месяца</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Contact Form -->
+    <section id="contact-form" class="bg-black/40 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400 text-center">Записаться на кодирование</h2>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Имя *</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">E-Mail *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Сообщение *</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none" placeholder="Опишите вашу ситуацию, стаж употребления алкоголя и предпочтительный метод кодирования"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-400 text-black py-3 px-6 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+                        ОТПРАВИТЬ ЗАЯВКУ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/60 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <span class="text-black font-bold text-sm">Ψ</span>
+                        </div>
+                        <span class="text-yellow-400 font-bold text-lg">Центр психотерапии</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Профессиональная психологическая помощь в Германии</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Быстрые ссылки</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-yellow-400 transition-colors">Главная</a></li>
+                        <li><a href="../specialists.html" class="text-gray-400 hover:text-yellow-400 transition-colors">Наши специалисты</a></li>
+                        <li><a href="../branches.html" class="text-gray-400 hover:text-yellow-400 transition-colors">Филиалы</a></li>
+                        <li><a href="../contact.html" class="text-gray-400 hover:text-yellow-400 transition-colors">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Услуги</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="psychiatrist.html" class="text-gray-400 hover:text-yellow-400 transition-colors">Консультации психиатра</a></li>
+                        <li><a href="psychologist.html" class="text-gray-400 hover:text-yellow-400 transition-colors">Консультации психолога</a></li>
+                        <li><a href="psychotherapy.html" class="text-gray-400 hover:text-yellow-400 transition-colors">Психотерапия</a></li>
+                        <li><a href="coaching.html" class="text-gray-400 hover:text-yellow-400 transition-colors">Коучинг</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Контакты</h3>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>Sternstraße 105, 20357 Hamburg</p>
+                        <p>+491788079318</p>
+                        <p>info777institut@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2024 Центр психотерапии и системного коучинга. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+
+        // Mobile services accordion
+        const mobileServicesBtn = document.getElementById('mobile-services-btn');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+        const mobileServicesIcon = document.getElementById('mobile-services-icon');
+        
+        mobileServicesBtn.addEventListener('click', () => {
+            mobileServicesMenu.classList.toggle('hidden');
+            mobileServicesIcon.classList.toggle('rotate-180');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.add('translate-x-full');
+            }
+        });
+    </script>
+    <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
+</body>
+</html>
+

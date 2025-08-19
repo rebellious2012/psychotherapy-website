@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психолог онлайн в Германии | Консультации и помощь | Центр психотерапии и системного коучинга</title>
+    <meta name="description" content="Правовая информация центра психотерапии и системного коучинга в Германии">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#2D1B14',
+                        'accent-gold': '#FFD700',
+                        'text-secondary': '#B0B0B0'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(45, 27, 20, 0.6), rgba(45, 27, 20, 0.6)), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-primary-bg text-white font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
+                    <span class="text-xl md:text-2xl font-bold text-accent-gold">
+                        Центр психотерапии
+                    </span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
+                    <a href="specialists.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex items-center">
+                            Услуги
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-80 bg-primary-bg/95 backdrop-blur-sm border border-accent-gold/20 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="services/psychiatrist.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all rounded-t-lg border-b border-white/10">Консультации клинического психолога онлайн ОНЛАЙН</a>
+                            <a href="services/psychologist.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="services/psychotherapy.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="services/alcohol-coding.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Кодирование от алкоголизма в Германии</a>
+                            <a href="services/expertise.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Клинико-психологическая экспертиза</a>
+                            <a href="services/coaching.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="services/mobbing.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психологическая помощь при моббинге</a>
+                            <a href="services/sexual-therapy.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all rounded-b-lg">Психотерапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+                    
+                    <a href="branches.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Филиалы</a>
+                    <a href="vacancies.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Вакансии</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Контакты</a>
+                    <a href="impressum.html" class="px-4 py-2 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Impressum</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-accent-gold text-primary-bg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
+            <div class="p-4">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-accent-gold">Меню</h2>
+                    <button id="mobile-menu-close" class="p-2 rounded-lg bg-accent-gold text-primary-bg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="space-y-2">
+                    <a href="index.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
+                    <a href="specialists.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
+                    
+                    <!-- Mobile Services Accordion -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger w-full text-left px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex justify-between items-center">
+                            Услуги
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content mt-2 space-y-1">
+                            <a href="services/psychiatrist.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации клинического психолога онлайн ОНЛАЙН</a>
+                            <a href="services/psychologist.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="services/psychotherapy.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="services/alcohol-coding.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Кодирование от алкоголизма в Германии</a>
+                            <a href="services/expertise.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Клинико-психологическая экспертиза</a>
+                            <a href="services/coaching.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="services/mobbing.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психологическая помощь при моббинге</a>
+                            <a href="services/sexual-therapy.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+                    
+                    <a href="branches.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Филиалы</a>
+                    <a href="vacancies.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Вакансии</a>
+                    <a href="contact.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Контакты</a>
+                    <a href="impressum.html" class="block px-4 py-3 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Impressum</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Breadcrumbs -->
+        <div class="bg-primary-bg/50 py-4">
+            <div class="container mx-auto px-4">
+                <nav class="flex items-center space-x-2 text-sm text-text-secondary">
+                    <a href="index.html" class="hover:text-accent-gold transition-colors">Главная</a>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span class="text-accent-gold">Impressum</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-bg py-20 text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                    Impressum
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+                    Правовая информация
+                </p>
+            </div>
+        </section>
+
+        <!-- Legal Information -->
+        <section class="py-16 px-4">
+            <div class="container mx-auto max-w-4xl">
+                
+                <!-- Company Information -->
+                <div class="bg-black/20 rounded-lg p-8 mb-8 border border-accent-gold/20">
+                    <h2 class="text-2xl font-bold text-accent-gold mb-6">Информация о компании</h2>
+                    
+                    <div class="space-y-4 text-white">
+                        <div>
+                            <span class="text-accent-gold font-semibold">Название:</span>
+                            <span class="ml-2">Центр психотерапии и системного коучинга</span>
+                        </div>
+                        <div>
+                            <span class="text-accent-gold font-semibold">Адрес:</span>
+                            <span class="ml-2">Sternstraße 105, 20357 Hamburg, Deutschland</span>
+                        </div>
+                        <div>
+                            <span class="text-accent-gold font-semibold">Телефон:</span>
+                            <span class="ml-2">+491788079318</span>
+                        </div>
+                        <div>
+                            <span class="text-accent-gold font-semibold">E-Mail:</span>
+                            <span class="ml-2">info777institut@gmail.com</span>
+                        </div>
+                        <div>
+                            <span class="text-accent-gold font-semibold">Руководитель:</span>
+                            <span class="ml-2">Максим Журин</span>
+                        </div>
+                        <div>
+                            <span class="text-accent-gold font-semibold">Год основания:</span>
+                            <span class="ml-2">2001</span>
+                        </div>
+                        <div>
+                            <span class="text-accent-gold font-semibold">Сфера деятельности:</span>
+                            <span class="ml-2">Психологическое консультирование, психотерапия, коучинг</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Information -->
+                <div class="bg-black/20 rounded-lg p-8 mb-8 border border-accent-gold/20">
+                    <h2 class="text-2xl font-bold text-accent-gold mb-6">Профессиональная информация</h2>
+                    
+                    <div class="space-y-4 text-white">
+                        <!-- <div>
+                            <span class="text-accent-gold font-semibold">Лицензии:</span>
+                            <span class="ml-2">Лицензия на оказание психологических услуг в Германии</span>
+                        </div> -->
+                        <div>
+                            <span class="text-accent-gold font-semibold">Регулирующие органы:</span>
+                            <span class="ml-2">Палата психотерапевтов Гамбурга</span>
+                        </div>
+                        <div>
+                            <span class="text-accent-gold font-semibold">Страхование ответственности:</span>
+                            <span class="ml-2">Профессиональная ответственность застрахована в соответствии с требованиями законодательства Германии</span>
+                        </div>
+                        <div>
+                            <span class="text-accent-gold font-semibold">Этические стандарты:</span>
+                            <span class="ml-2">Деятельность осуществляется в соответствии с этическими принципами Немецкой ассоциации психологов</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Information -->
+                <div class="bg-black/20 rounded-lg p-8 mb-8 border border-accent-gold/20">
+                    <h2 class="text-2xl font-bold text-accent-gold mb-6">Правовая информация</h2>
+                    
+                    <div class="space-y-6 text-white">
+                        <div>
+                            <h3 class="text-lg font-semibold text-accent-gold mb-2">Ответственность за контент</h3>
+                            <p>Содержание наших страниц создано с особой тщательностью. Однако мы не можем гарантировать точность, полноту и актуальность содержания. Как поставщик услуг, мы несем ответственность за собственное содержание этих страниц в соответствии с общими законами согласно § 7, абз. 1 TMG.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-accent-gold mb-2">Ответственность за ссылки</h3>
+                            <p>Наше предложение содержит ссылки на внешние веб-сайты третьих лиц, на содержание которых мы не имеем влияния. Поэтому мы не можем нести ответственность за это внешнее содержание. За содержание связанных страниц всегда отвечает соответствующий поставщик или оператор страниц.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-accent-gold mb-2">Авторские права</h3>
+                            <p>Содержание и работы на этих страницах, созданные операторами сайта, подлежат немецкому авторскому праву. Дублирование, обработка, распространение и любое использование за пределами авторского права требует письменного согласия соответствующего автора или создателя.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Protection -->
+                <div class="bg-black/20 rounded-lg p-8 mb-8 border border-accent-gold/20">
+                    <h2 class="text-2xl font-bold text-accent-gold mb-6">Защита данных</h2>
+                    
+                    <div class="space-y-6 text-white">
+                        <div>
+                            <h3 class="text-lg font-semibold text-accent-gold mb-2">Общие положения</h3>
+                            <p>Использование нашего веб-сайта обычно возможно без предоставления персональных данных. Насколько на наших страницах собираются персональные данные (например, имя, адрес или адреса электронной почты), это происходит, насколько это возможно, на добровольной основе.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-accent-gold mb-2">Ответственный за защиту данных</h3>
+                            <p>Ответственным за обработку данных на этом веб-сайте является Максим Журин. Вы можете связаться с нами по указанным выше контактным данным.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-accent-gold mb-2">Соответствие GDPR</h3>
+                            <p>Мы обрабатываем ваши данные в соответствии с Общим регламентом по защите данных (GDPR) Европейского Союза и применимым национальным законодательством о защите данных.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dispute Resolution -->
+                <div class="bg-black/20 rounded-lg p-8 border border-accent-gold/20">
+                    <h2 class="text-2xl font-bold text-accent-gold mb-6">Разрешение споров</h2>
+                    
+                    <div class="space-y-4 text-white">
+                        <div>
+                            <h3 class="text-lg font-semibold text-accent-gold mb-2">Онлайн-платформа ЕС</h3>
+                            <p>Европейская комиссия предоставляет платформу для онлайн-разрешения споров (OS): <a href="https://ec.europa.eu/consumers/odr/" class="text-accent-gold hover:text-yellow-300 transition-colors">https://ec.europa.eu/consumers/odr/</a></p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-accent-gold mb-2">Альтернативное разрешение споров</h3>
+                            <p>Мы не обязаны и не готовы участвовать в процедурах разрешения споров перед потребительским арбитражным советом.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 py-12 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-accent-gold rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary-bg font-bold text-lg">Ψ</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-accent-gold">Центр</h3>
+                            <h3 class="text-xl font-bold text-accent-gold">психотерапии</h3>
+                            <p class="text-sm text-text-secondary">и системного коучинга</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary">
+                        Профессиональная психологическая помощь в Германии с 2001 года.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-accent-gold mb-4">Быстрые ссылки</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-text-secondary hover:text-accent-gold transition-colors">Главная</a></li>
+                        <li><a href="specialists.html" class="text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a></li>
+                        <li><a href="branches.html" class="text-text-secondary hover:text-accent-gold transition-colors">Филиалы</a></li>
+                        <li><a href="vacancies.html" class="text-text-secondary hover:text-accent-gold transition-colors">Вакансии</a></li>
+                        <li><a href="contact.html" class="text-text-secondary hover:text-accent-gold transition-colors">Контакты</a></li>
+                        <li><a href="impressum.html" class="text-text-secondary hover:text-accent-gold transition-colors">Impressum</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold text-accent-gold mb-4">Контакты</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>Sternstraße 105, 20357 Hamburg</p>
+                        <p>+491788079318</p>
+                        <p>info777institut@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-text-secondary">
+                <p>&copy; 2024 Центр психотерапии и системного коучинга. Все права защищены.</p>
+                <p class="mt-2">Руководитель: Максим Журин | <a href="impressum.html" class="text-accent-gold hover:text-yellow-300 transition-colors">Разработка сайта</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+        });
+
+        // Services accordion functionality
+        const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+        
+        accordionTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const content = trigger.nextElementSibling;
+                const icon = trigger.querySelector('svg');
+                
+                content.classList.toggle('open');
+                icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+            });
+        });
+    </script>
+    <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
+</body>
+</html>
+
