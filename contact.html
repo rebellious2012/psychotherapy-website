@@ -314,46 +314,6 @@
 
     <!-- JavaScript -->
     <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('mobile-menu-open');
-        });
-
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('mobile-menu-open');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.remove('mobile-menu-open');
-            }
-        });
-
-        // Mobile accordion functionality
-        document.querySelectorAll('.accordion-trigger').forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const content = trigger.nextElementSibling;
-                const icon = trigger.querySelector('svg');
-                
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                    icon.style.transform = 'rotate(0deg)';
-                } else {
-                    // Close all other accordions
-                    document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
-                    document.querySelectorAll('.accordion-trigger svg').forEach(i => i.style.transform = 'rotate(0deg)');
-                    
-                    content.style.display = 'block';
-                    icon.style.transform = 'rotate(180deg)';
-                }
-            });
-        });
-
         // Form submission
         document.querySelector('form').addEventListener('submit', (e) => {
             e.preventDefault();

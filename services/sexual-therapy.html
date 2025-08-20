@@ -445,33 +445,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('translate-x-full');
-        });
-
-        // Mobile services accordion
-        const mobileServicesBtn = document.getElementById('mobile-services-btn');
-        const mobileServicesMenu = document.getElementById('mobile-services-menu');
-        const mobileServicesIcon = document.getElementById('mobile-services-icon');
-        
-        mobileServicesBtn.addEventListener('click', () => {
-            mobileServicesMenu.classList.toggle('hidden');
-            mobileServicesIcon.classList.toggle('rotate-180');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.add('translate-x-full');
-            }
-        });
-    </script>
     <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>

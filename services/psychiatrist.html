@@ -392,36 +392,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const mobileServicesBtn = document.getElementById('mobile-services-btn');
-        const mobileServicesMenu = document.getElementById('mobile-services-menu');
-        const mobileServicesIcon = document.getElementById('mobile-services-icon');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-full');
-        });
-
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-        });
-
-        mobileServicesBtn.addEventListener('click', () => {
-            mobileServicesMenu.classList.toggle('hidden');
-            mobileServicesIcon.classList.toggle('rotate-180');
-        });
-
-        // Close mobile menu when clicking outside
-        mobileMenu.addEventListener('click', (e) => {
-            if (e.target === mobileMenu) {
-                mobileMenu.classList.add('translate-x-full');
-            }
-        });
-    </script>
     <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
