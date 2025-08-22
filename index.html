@@ -40,13 +40,13 @@
             transform: translateX(0);
         }
         
-        .accordion-content {
+        .accordion-content, .faq-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
         
-        .accordion-content.open {
+        .accordion-content.open, .faq-content.open {
             max-height: 500px;
         }
     </style>

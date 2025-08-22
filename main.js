@@ -91,21 +91,24 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 window.open(whatsappUrl, '_blank');
 }
 // Contact form functionality
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
+        const formData = new FormData(e.target);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
 
-    // Simple validation
-    if (!name || !email || !message) {
-        alert('Пожалуйста, заполните все обязательные поля');
-        return;
-    }
+        // Simple validation
+        if (!name || !email || !message) {
+            alert('Пожалуйста, заполните все обязательные поля');
+            return;
+        }
 
-    // Simulate form submission
-    alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
-    e.target.reset();
-});
+        // Simulate form submission
+        alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+        e.target.reset();
+    });
+}
