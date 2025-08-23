@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты PsyHelper | Онлайн психолог в Германии | Центр психотерапии и системного коучинга</title>
+    <meta name="description" content="Свяжитесь с нами для записи на консультацию или вопросов. Онлайн помощь психолога и психиатра в Германии.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#2D1B14',
+                        'accent-gold': '#FFD700',
+                        'text-light': '#FFFFFF',
+                        'text-secondary': '#B0B0B0'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-bg text-text-light font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg/95 backdrop-blur-sm border-b border-accent-gold/20">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
+                    <span class="text-xl md:text-2xl font-bold text-accent-gold">
+                        Center für Coaching
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="/" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Главная</a>
+                    <a href="specialists" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex items-center">
+                            Услуги
+                            <svg class="w-4 h-4 ml-2 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-80 bg-primary-bg/95 backdrop-blur-sm border border-accent-gold/20 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="services/psychiatrist" class="block px-4 py-3 text-white hover:bg-white/10 transition-all rounded-t-lg border-b border-white/10">Консультации клинического психолога ОНЛАЙН</a>
+                            <a href="services/psychologist" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="services/psychotherapy" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="services/alcohol-coding" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Кодирование от алкоголизма в Германии</a>
+                            <a href="services/expertise" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психологическая помощь для подростков</a>
+                            <a href="services/coaching" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="services/mobbing" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психологическая помощь при моббинге</a>
+                            <a href="services/sexual-therapy" class="block px-4 py-3 text-white hover:bg-white/10 transition-all rounded-b-lg">Психотерапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+                    
+                    <a href="branches" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Филиалы</a>
+                    <a href="vacancies" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Вакансии</a>
+                    <a href="contact" class="px-4 py-2 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Контакты</a>
+                    <a href="impressum" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Impressum</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-accent-gold text-primary-bg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
+            <div class="p-4">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-accent-gold">Меню</h2>
+                    <button id="mobile-menu-close" class="p-2 rounded-lg bg-accent-gold text-primary-bg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="space-y-2">
+                    <a href="index" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Главная</a>
+                    <a href="specialists" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
+                    
+                    <!-- Mobile Services Accordion -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger w-full text-left px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex justify-between items-center">
+                            Услуги
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content mt-2 space-y-1">
+                            <a href="services/psychiatrist" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации клинического психолога ОНЛАЙН</a>
+                            <a href="services/psychologist" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="services/psychotherapy" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="services/alcohol-coding" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Кодирование от алкоголизма в Германии</a>
+                            <a href="services/expertise" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Клинико-психологическая экспертиза</a>
+                            <a href="services/coaching" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="services/mobbing" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психологическая помощь при моббинге</a>
+                            <a href="services/sexual-therapy" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+                    
+                    <a href="branches" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Филиалы</a>
+                    <a href="vacancies" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Вакансии</a>
+                    <a href="contact" class="block px-4 py-3 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Контакты</a>
+                    <a href="impressum" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Impressum</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="pt-20 pb-4 bg-primary-bg">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm">
+                <a href="index" class="text-accent-gold hover:text-accent-gold/80">Главная</a>
+                <span class="mx-2 text-text-secondary">></span>
+                <span class="text-text-secondary">Контакты</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(45, 27, 20, 0.8), rgba(45, 27, 20, 0.8)), url('photo_2025-07-17_16-37-07.jpg');">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-accent-gold">Контакты</h1>
+            <p class="text-xl md:text-2xl text-text-light max-w-3xl mx-auto">
+                Свяжитесь с нами для получения профессиональной помощи
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <!-- Main Office Info -->
+                    <div class="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-accent-gold/20">
+                        <h2 class="text-2xl font-bold text-accent-gold mb-6">Главный офис</h2>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-accent-gold rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-4 h-4 text-primary-bg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-accent-gold">Адрес</h3>
+                                    <p class="text-text-light">Sternstraße 105, 20357 Hamburg</p>
+                                    <p class="text-text-secondary text-sm">Основан в 2001 году, 15 филиалов в Германии</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-accent-gold rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-4 h-4 text-primary-bg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-accent-gold">Телефон</h3>
+                                    <p class="text-text-light">+491788079318</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-accent-gold rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-4 h-4 text-primary-bg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-accent-gold">Email</h3>
+                                    <p class="text-text-light">info777institut@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-accent-gold rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-4 h-4 text-primary-bg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-accent-gold">Часы работы</h3>
+                                    <p class="text-text-light">Пн-Пт: 8:00 - 20:00</p>
+                                    <p class="text-text-light">Сб: 9:00 - 16:00</p>
+                                    <p class="text-text-light">Вс: 10:00 - 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-accent-gold/20">
+                        <h2 class="text-2xl font-bold text-accent-gold mb-6">Дополнительная информация</h2>
+                        <div class="space-y-4 text-text-light">
+                            <p>Наш центр предоставляет профессиональные услуги психотерапии и коучинга уже более 20 лет.</p>
+                            <p>Мы работаем с клиентами по всей Германии через сеть из 15 филиалов и онлайн-консультации.</p>
+                            <p>Все наши специалисты имеют соответствующие сертификаты и многолетний опыт работы.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-accent-gold/20">
+                    <h2 class="text-2xl font-bold text-accent-gold mb-6">Свяжитесь с нами</h2>
+                    
+                    <form method="POST" action="send_email.php" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-accent-gold mb-2">Имя *</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-text-light placeholder-text-secondary focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all"
+                                   placeholder="Введите ваше имя">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-accent-gold mb-2">E-Mail *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-text-light placeholder-text-secondary focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all"
+                                   placeholder="Введите ваш email">
+                        </div>
+
+                        <div>
+                            <label for="specialist" class="block text-sm font-medium text-accent-gold mb-2">Выберите специалиста</label>
+                            <select id="specialist" name="specialist" 
+                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-text-light focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all">
+                                <option value="">Любой специалист</option>
+                                <option value="maxim">Максим Журин (Руководитель центра)</option>
+                                <option value="anna">Анна Петрова (Врач-психиатр)</option>
+                                <option value="elena">Елена Смирнова (Психотерапевт)</option>
+                                <option value="dmitry">Дмитрий Козлов (Коуч)</option>
+                                <option value="maria">Мария Волкова (Детский психолог)</option>
+                                <option value="alexander">Александр Новиков (Сексолог)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-accent-gold mb-2">Сообщение *</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-text-light placeholder-text-secondary focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all resize-none"
+                                      placeholder="Опишите вашу ситуацию или вопрос"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-accent-gold text-primary-bg font-bold py-4 px-6 rounded-lg hover:bg-accent-gold/90 transition-all duration-300 transform hover:scale-105">
+                            ОТПРАВИТЬ ЗАЯВКУ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 py-12 px-4 border-t border-accent-gold/20">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-accent-gold">Центр психотерапии</h3>
+                    <p class="text-text-secondary mb-4">
+                        Профессиональная психологическая помощь с 2001 года
+                    </p>
+                    <p class="text-sm text-text-secondary">
+                        Sternstraße. 105 ,20357 Hamburg , Deutschland
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Контакты</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>WhatsApp: +491788079318</p>
+                        <p>Email: info777institut@gmail.com</p>
+                        <p>Режим работы: Пн-Сб 9:00-21:00</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
+                    <div class="space-y-2">
+                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
+                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-accent-gold/20 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 Центр системной психотерапии и феменологического коучинга.
+                    Руководитель: Dipl.- Psychologe Maksym Zhurin
+                </p>
+                <p class="text-sm text-text-secondary mt-2">
+                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form submission is now handled by send_email.php -->
+
+    <style>
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu-open {
+            transform: translateX(0);
+        }
+        
+        .accordion-content {
+            display: none;
+        }
+    </style>
+    <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
+<script src="main.js" defer></script>
+</body>
+</html>
+

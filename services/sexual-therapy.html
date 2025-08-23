@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семейные психологи для подростков — помощь в кризисе, конфликтах и адаптации | psyhelper.de</title>
+    <meta name="description" content="Центр психотерапии и системного коучинга предлагает поддержку от семейных психологов для подростков и их родителей. Работа с конфликтами, тревожностью, низкой самооценкой и кризисами в семье. Анонимно, онлайн, с соблюдением GDPR">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .hero-bg {
+            background-image: url('../hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
+                    <span class="text-xl md:text-2xl font-bold text-accent-gold">
+                        Center für Coaching
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="../index.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
+                    <a href="../specialists.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши специалисты</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
+                            <span>Услуги</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="p-2">
+                                <a href="psychiatrist.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации клинического психолога ОНЛАЙН</a>
+                                <a href="psychologist.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации психолога ОНЛАЙН</a>
+                                <a href="psychotherapy.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия ОНЛАЙН</a>
+                                <a href="alcohol-coding.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Кодирование от алкоголизма в Германии</a>
+                                <a href="expertise.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь для подростков</a>
+                                <a href="coaching.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации коуча ОНЛАЙН</a>
+                                <a href="mobbing.html" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь при моббинге</a>
+                                <a href="sexual-therapy.html" class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Психотерапия сексуальных расстройств</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="../branches.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
+                    <a href="../vacancies.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
+                    <a href="../contact.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
+                    <a href="../impressum.html" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden fixed top-16 right-0 w-80 h-screen bg-black/95 backdrop-blur-sm transform translate-x-full transition-transform duration-300 overflow-y-auto">
+            <div class="p-4 space-y-2">
+                <a href="../index.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
+                <a href="../specialists.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши специалисты</a>
+                
+                <!-- Mobile Services Accordion -->
+                <div class="border border-yellow-400/60 rounded-lg">
+                    <button id="mobile-services-btn" class="w-full px-4 py-3 bg-yellow-400/20 text-yellow-400 rounded-lg flex items-center justify-between">
+                        <span>Услуги</span>
+                        <svg id="mobile-services-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobile-services-menu" class="hidden px-2 pb-2 space-y-1">
+                        <a href="psychiatrist.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации клинического психолога ОНЛАЙН</a>
+                        <a href="psychologist.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации психолога ОНЛАЙН</a>
+                        <a href="psychotherapy.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
+                        <a href="alcohol-coding.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Кодирование от алкоголизма в Германии</a>
+                        <a href="expertise.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Клинико-психологическая экспертиза</a>
+                        <a href="coaching.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации коуча ОНЛАЙН</a>
+                        <a href="mobbing.html" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь при моббинге</a>
+                        <a href="sexual-therapy.html" class="block px-4 py-2 rounded bg-yellow-400/20 text-yellow-400">Психотерапия сексуальных расстройств</a>
+                    </div>
+                </div>
+                
+                <a href="../branches.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Филиалы</a>
+                <a href="../vacancies.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Вакансии</a>
+                <a href="../contact.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Контакты</a>
+                <a href="../impressum.html" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Impressum</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="pt-20 pb-4 bg-[#2D1B14]">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm">
+                <ol class="flex items-center space-x-2 text-gray-400">
+                    <li><a href="../index.html" class="hover:text-yellow-400 transition-colors">Главная</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li><span class="text-gray-500">Услуги</span></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li><span class="text-yellow-400">Психотерапия сексуальных расстройств</span></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative min-h-[60vh] flex items-center">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                    Психотерапия сексуальных расстройств
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                    Деликатная и профессиональная помощь в решении интимных проблем. Восстановление гармонии в сексуальной сфере жизни.
+                </p>
+                <a onclick="openWhatsApp()" href="#contact-form" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+                    ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="bg-[#2D1B14] py-16">
+        <div class="container mx-auto px-4">
+            <!-- Service Description -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">О сексуальной терапии</h2>
+                    <div class="prose prose-lg text-gray-300 space-y-6">
+                        <p>
+                            Сексуальная терапия — это специализированная область психотерапии, направленная на решение проблем в интимной жизни, связанных с различными сексуальными расстройствами. Наши квалифицированные специалисты работают с широким спектром сексуальных нарушений, используя научно обоснованные методы лечения. В центре нашего подхода — создание безопасного пространства для откровенных разговоров, понимания и восстановления гармонии в отношениях.
+                        </p>
+                        <p>
+                            Понимая, насколько деликатной является эта тема, мы гарантируем полную конфиденциальность и создаем атмосферу доверия. Мы работаем как с индивидуальными пациентами, так и с парами, что позволяет нам предложить персонализированные методы, ориентированные на достижение долгосрочных результатов.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Types of Disorders -->
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Мы специализируемся на лечении следующих типов сексуальных расстройств:</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Расстройства возбуждения</h3>
+                            <p class="text-gray-300">Проблемы с достижением или поддержанием сексуального возбуждения, которые могут быть вызваны как психологическими, так и физическими факторами.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Расстройства оргазма</h3>
+                            <p class="text-gray-300">Трудности с достижением оргазма или его отсутствие, что часто связано с внутренними барьерами или отношениями.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Болевые расстройства</h3>
+                            <p class="text-gray-300">Боль во время интимной близости, вагинизм, диспареуния.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Расстройства желания</h3>
+                            <p class="text-gray-300">Снижение или отсутствие сексуального влечения, что может существенно повлиять на качество жизни.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Парафилии</h3>
+                            <p class="text-gray-300">Нетипичные сексуальные предпочтения и поведение, требующие профессионального подхода для их корректировки.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Сексуальная зависимость</h3>
+                            <p class="text-gray-300">Компульсивное сексуальное поведение, порнозависимость, требующие психотерапевтического вмешательства для восстановления гармонии.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Causes -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Причины сексуальных расстройств</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <h3 class="text-xl font-semibold mb-4 text-white">Психологические факторы</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• Стресс и тревожность</li>
+                                <li>• Депрессия и эмоциональные расстройства</li>
+                                <li>• Травматический опыт</li>
+                                <li>• Низкая самооценка</li>
+                                <li>• Проблемы в отношениях</li>
+                                <li>• Религиозные или культурные запреты</li>
+                                <li>• Неправильные представления о сексе</li>
+                            </ul>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <h3 class="text-xl font-semibold mb-4 text-white">Физические факторы</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• Гормональные нарушения</li>
+                                <li>• Сердечно-сосудистые заболевания</li>
+                                <li>• Диабет и неврологические расстройства</li>
+                                <li>• Побочные эффекты лекарств</li>
+                                <li>• Хронические заболевания</li>
+                                <li>• Возрастные изменения</li>
+                                <li>• Злоупотребление алкоголем или наркотиками</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Treatment Methods -->
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Методы лечения</h2>
+
+<div class="prose prose-lg text-gray-300 space-y-6">
+                        <p>
+                            Наши терапевты применяют инновационные и доказательные методы для лечения сексуальных расстройств:
+                        </p>
+
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Когнитивно-поведенческая терапия</h3>
+                            <p class="text-gray-300">Изменение негативных мыслей и поведенческих паттернов, которые препятствуют здоровому сексуальному функционированию.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Парная терапия</h3>
+                            <p class="text-gray-300">Работа с парами для улучшения интимности и коммуникации, что способствует улучшению сексуальной жизни.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Техники релаксации</h3>
+                            <p class="text-gray-300">Снижение тревожности и напряжения через методы релаксации и медитации, которые восстанавливают гармонию в отношениях.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Психообразование</h3>
+                            <p class="text-gray-300">Обучение анатомии, физиологии и здоровой сексуальности, что помогает избавиться от мифов и страха, связанного с интимной жизнью.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Майндфулнес</h3>
+                            <p class="text-gray-300">Метод осознанности, который помогает присутствовать в моменте интимности, улучшая связь с партнером.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Домашние задания</h3>
+                            <p class="text-gray-300">Специальные упражнения, которые пациенты выполняют дома или с партнером, для закрепления результатов терапии.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Treatment Process -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Процесс лечения</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Первичная консультация</h3>
+                                <p class="text-gray-300">Деликатная беседа о проблеме, сбор анамнеза, оценка состояния.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Диагностика</h3>
+                                <p class="text-gray-300">Определение типа расстройства, выявление причин и факторов.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Составление плана лечения</h3>
+                                <p class="text-gray-300">Индивидуальная программа терапии с учетом особенностей случая.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Терапевтические сессии</h3>
+                                <p class="text-gray-300">Регулярные встречи, работа с упражнениями и техниками.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">5</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-white">Закрепление результатов</h3>
+                                <p class="text-gray-300">Поддерживающие сессии, профилактика рецидивов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">Стоимость терапии</h2>
+                    <div class="bg-black/30 p-8 rounded-lg border border-yellow-400/20">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4 text-white">Индивидуальная сессия</h3>
+                                <p class="text-3xl font-bold text-yellow-400 mb-2">€120</p>
+                                <p class="text-gray-300">60 минут</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4 text-white">Парная терапия</h3>
+                                <p class="text-3xl font-bold text-yellow-400 mb-2">€150</p>
+                                <p class="text-gray-300">75 минут</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4 text-white">Интенсивная программа</h3>
+                                <p class="text-3xl font-bold text-yellow-400 mb-2">€1000</p>
+                                <p class="text-gray-300">10 сессий + материалы</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mt-6">Первая консультация (30 минут) проводится бесплатно. Возможна оплата через страховку при наличии направления врача</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 py-12 px-4 border-t border-accent-gold/20">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-accent-gold">Центр психотерапии</h3>
+                    <p class="text-text-secondary mb-4">
+                        Профессиональная психологическая помощь с 2001 года
+                    </p>
+                    <p class="text-sm text-text-secondary">
+                        Sternstraße. 105 ,20357 Hamburg , Deutschland
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Контакты</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>WhatsApp: +491788079318</p>
+                        <p>Email: info777institut@gmail.com</p>
+                        <p>Режим работы: Пн-Сб 9:00-21:00</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
+                    <div class="space-y-2">
+                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
+                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-accent-gold/20 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 Центр системной психотерапии и феменологического коучинга.
+                    Руководитель: Dipl.- Psychologe Maksym Zhurin
+                </p>
+                <p class="text-sm text-text-secondary mt-2">
+                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
+<script src="../main.js" defer></script>
+</body>
+</html>

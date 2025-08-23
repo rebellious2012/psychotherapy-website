@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психолог онлайн в Германии | Консультации и помощь | Центр психотерапии и системного коучинга</title>
+    <meta name="description" content="Правовая информация центра психотерапии и системного коучинга в Германии">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#2D1B14',
+                        'accent-gold': '#FFD700',
+                        'text-secondary': '#B0B0B0'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(45, 27, 20, 0.6), rgba(45, 27, 20, 0.6)), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.open {
+            max-height: 3000px;
+        }
+    </style>
+</head>
+<body class="bg-primary-bg text-white font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
+                    <span class="text-xl md:text-2xl font-bold text-accent-gold">
+                        Center für Coaching
+                    </span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
+                    <a href="specialists.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex items-center">
+                            Услуги
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-80 bg-primary-bg/95 backdrop-blur-sm border border-accent-gold/20 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="services/psychiatrist.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all rounded-t-lg border-b border-white/10">Консультации клинического психолога ОНЛАЙН</a>
+                            <a href="services/psychologist.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="services/psychotherapy.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="services/alcohol-coding.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Кодирование от алкоголизма в Германии</a>
+                            <a href="services/expertise.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психологическая помощь для подростков</a>
+                            <a href="services/coaching.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="services/mobbing.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психологическая помощь при моббинге</a>
+                            <a href="services/sexual-therapy.html" class="block px-4 py-3 text-white hover:bg-white/10 transition-all rounded-b-lg">Психотерапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+                    
+                    <a href="branches.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Филиалы</a>
+                    <a href="vacancies.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Вакансии</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Контакты</a>
+                    <a href="impressum.html" class="px-4 py-2 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Impressum</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-accent-gold text-primary-bg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
+            <div class="p-4">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-accent-gold">Меню</h2>
+                    <button id="mobile-menu-close" class="p-2 rounded-lg bg-accent-gold text-primary-bg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="space-y-2">
+                    <a href="index.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
+                    <a href="specialists.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
+                    
+                    <!-- Mobile Services Accordion -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger w-full text-left px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex justify-between items-center">
+                            Услуги
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content mt-2 space-y-1">
+                            <a href="services/psychiatrist.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации клинического психолога ОНЛАЙН</a>
+                            <a href="services/psychologist.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="services/psychotherapy.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="services/alcohol-coding.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Кодирование от алкоголизма в Германии</a>
+                            <a href="services/expertise.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Клинико-психологическая экспертиза</a>
+                            <a href="services/coaching.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="services/mobbing.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психологическая помощь при моббинге</a>
+                            <a href="services/sexual-therapy.html" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+                    
+                    <a href="branches.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Филиалы</a>
+                    <a href="vacancies.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Вакансии</a>
+                    <a href="contact.html" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Контакты</a>
+                    <a href="impressum.html" class="block px-4 py-3 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Impressum</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Breadcrumbs -->
+        <div class="bg-primary-bg/50 py-4">
+            <div class="container mx-auto px-4">
+                <nav class="flex items-center space-x-2 text-sm text-text-secondary">
+                    <a href="index.html" class="hover:text-accent-gold transition-colors">Главная</a>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span class="text-accent-gold">Datenschutz</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-bg py-20 text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                    Datenschutz
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+                    Правовая информация
+                </p>
+            </div>
+        </section>
+
+        <!-- Legal Information -->
+        <section class="py-16 px-4">
+            <div class="container mx-auto max-w-4xl">
+                
+                <!-- Company Information -->
+                <div class="bg-black/20 rounded-lg p-8 mb-8 border border-accent-gold/20">
+                    <h2 class="text-2xl font-bold text-accent-gold mb-6">Информация о компании</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Privacy Item 1 -->
+                        <div class="faq-item bg-black/20 rounded-lg">
+                            <button class="faq-trigger w-full text-left p-6 flex justify-between items-center">
+                                <span class="text-lg font-semibold text-accent-gold">1. Datenschutz auf einen Blick</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content faq-content px-6 pb-6 text-text-secondary">
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Allgemeine Hinweise</h4>
+                                <p class="mb-4">Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Datenerfassung auf dieser Website</h4>
+                                <p class="mb-2"><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
+                                <p class="mb-4">Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.</p>
+                                <p class="mb-2"><strong>Wie erfassen wir Ihre Daten?</strong></p>
+                                <p class="mb-4">Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
+                                <p class="mb-4">Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p>
+                                <p class="mb-2"><strong>Wofür nutzen wir Ihre Daten?</strong></p>
+                                <p class="mb-4">Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
+                                <p class="mb-2"><strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong></p>
+                                <p class="mb-4">Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.</p>
+                                <p class="mb-4">Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Analyse-Tools und Tools von Drittanbietern</h4>
+                                <p>Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit sogenannten Analyseprogrammen.</p>
+                                <p>Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerklärung.</p>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Item 2 -->
+                        <div class="faq-item bg-black/20 rounded-lg">
+                            <button class="faq-trigger w-full text-left p-6 flex justify-between items-center">
+                                <span class="text-lg font-semibold text-accent-gold">2. Hosting</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content faq-content px-6 pb-6 text-text-secondary">
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Externes Hosting</h4>
+                                <p class="mb-4">Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.</p>
+                                <p class="mb-4">Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.</p>
+                                <p class="mb-4">Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.</p>
+                                <p>Wir setzen folgende(n) Hoster ein:</p>
+                                <p class="mt-2">Droptop GmbH<br>Am Grashorn 8<br>14548, Schwielowsee</p>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Item 3 -->
+                        <div class="faq-item bg-black/20 rounded-lg">
+                            <button class="faq-trigger w-full text-left p-6 flex justify-between items-center">
+                                <span class="text-lg font-semibold text-accent-gold">3. Allgemeine Hinweise und Pflichtinformationen</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content faq-content px-6 pb-6 text-text-secondary">
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Datenschutz</h4>
+                                <p class="mb-4">Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+                                <p class="mb-4">Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.</p>
+                                <p class="mb-4">Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Hinweis zur verantwortlichen Stelle</h4>
+                                <p class="mb-4">Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+                                <p class="mb-4">Geschäftsleiter Dipl. Psychologe M. Zhurin<br>Hanauer Str.70 ,<br>80993 München<br>+49 178 - 8079318<br>infoinstitut777@gmail.com<br>Steuernummer: 20829270928</p>
+                                <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Speicherdauer</h4>
+                                <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h4>
+                                <p>Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Hinweis zur Datenweitergabe in die USA und sonstige Drittstaaten</h4>
+                                <p>Wir verwenden unter anderem Tools von Unternehmen mit Sitz in den USA oder sonstigen datenschutzrechtlich nicht sicheren Drittstaaten. Wenn diese Tools aktiv sind, können Ihre personenbezogene Daten in diese Drittstaaten übertragen und dort verarbeitet werden. Wir weisen darauf hin, dass in diesen Ländern kein mit der EU vergleichbares Datenschutzniveau garantiert werden kann. Beispielsweise sind US-Unternehmen dazu verpflichtet, personenbezogene Daten an Sicherheitsbehörden herauszugeben, ohne dass Sie als Betroffener hiergegen gerichtlich vorgehen könnten. Es kann daher nicht ausgeschlossen werden, dass US-Behörden (z. B. Geheimdienste) Ihre auf US-Servern befindlichen Daten zu Überwachungszwecken verarbeiten, auswerten und dauerhaft speichern. Wir haben auf diese Verarbeitungstätigkeiten keinen Einfluss.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h4>
+                                <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)</h4>
+                                <p class="mb-4">WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).</p>
+                                <p>WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
+                                <p>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Recht auf Datenübertragbarkeit</h4>
+                                <p>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Auskunft, Löschung und Berichtigung</h4>
+                                <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">Recht auf Einschränkung der Verarbeitung</h4>
+                                <p class="mb-4">Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:</p>
+                                <ul class="list-disc list-inside mb-4 space-y-2">
+                                    <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+                                    <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen.</li>
+                                    <li>Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+                                    <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+                                </ul>
+                                <p>Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben, dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.</p>
+
+                                <h4 class="text-lg font-semibold text-white mt-4 mb-2">SSL- bzw. TLS-Verschlüsselung</h4>
+                                <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+                                <p>Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Item 4 -->
+                        <div class="faq-item bg-black/20 rounded-lg">
+                            <button class="faq-trigger w-full text-left p-6 flex justify-between items-center">
+                                <span class="text-lg font-semibold text-accent-gold">4. Datenerfassung auf dieser Website</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content faq-content px-6 pb-6 text-text-secondary space-y-4">
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Einwilligung mit Borlabs Cookie</h4>
+                                    <p>Unsere Website nutzt die Consent-Technologie von Borlabs Cookie, um Ihre Einwilligung zur Speicherung bestimmter Cookies in Ihrem Browser oder zum Einsatz bestimmter Technologien einzuholen und diese datenschutzkonform zu dokumentieren. Anbieter dieser Technologie ist die Borlabs GmbH, Rübenkamp 32, 22305 Hamburg (im Folgenden Borlabs).</p>
+                                    <p>Wenn Sie unsere Website betreten, wird ein Borlabs-Cookie in Ihrem Browser gespeichert, in dem die von Ihnen erteilten Einwilligungen oder der Widerruf dieser Einwilligungen gespeichert werden. Diese Daten werden nicht an den Anbieter von Borlabs Cookie weitergegeben.</p>
+                                    <p>Die erfassten Daten werden gespeichert, bis Sie uns zur Löschung auffordern bzw. das Borlabs-Cookie selbst löschen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Aufbewahrungsfristen bleiben unberührt. Details zur Datenverarbeitung von Borlabs Cookie finden Sie unter <a href="https://de.borlabs.io/kb/welche-daten-speichert-borlabs-cookie/" class="text-accent-gold hover:underline">https://de.borlabs.io/kb/welche-daten-speichert-borlabs-cookie/</a>.</p>
+                                    <p>Der Einsatz der Borlabs-Cookie-Consent-Technologie erfolgt, um die gesetzlich vorgeschriebenen Einwilligungen für den Einsatz von Cookies einzuholen. Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. c DSGVO.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Server-Log-Dateien</h4>
+                                    <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
+                                    <ul class="list-disc list-inside my-2">
+                                        <li>Browsertyp und Browserversion</li>
+                                        <li>verwendetes Betriebssystem</li>
+                                        <li>Referrer URL</li>
+                                        <li>Hostname des zugreifenden Rechners</li>
+                                        <li>Uhrzeit der Serveranfrage</li>
+                                        <li>IP-Adresse</li>
+                                    </ul>
+                                    <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+                                    <p>Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Kommunikation via WhatsApp</h4>
+                                    <p>Für die Kommunikation mit unseren Kunden und sonstigen Dritten nutzen wir unter anderem den Instant-Messaging-Dienst WhatsApp. Anbieter ist die WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland.</p>
+                                    <p>Der Einsatz von WhatsApp erfolgt auf Grundlage unseres berechtigten Interesses an einer möglichst schnellen und effektiven Kommunikation mit Kunden, Interessenten und sonstigen Geschäfts- und Vertragspartnern (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Datenverarbeitung ausschließlich auf Grundlage der Einwilligung; diese ist jederzeit mit Wirkung für die Zukunft widerrufbar.</p>
+                                    <p>Weitere Details zur Datenverarbeitung finden Sie in der Datenschutzrichtlinie von WhatsApp unter: <a href="https://www.whatsapp.com/legal/#privacy-policy" class="text-accent-gold hover:underline">https://www.whatsapp.com/legal/#privacy-policy</a>.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Google Forms</h4>
+                                    <p>Wir haben Google Forms auf dieser Website eingebunden. Anbieter ist die die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (nachfolgend Google).</p>
+                                    <p>Der Einsatz von Google Forms erfolgt auf Grundlage unseres berechtigten Interesses an einer möglichst nutzerfreundlichen Ermittlung Ihres Anliegens (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.</p>
+                                    <p>Weitere Informationen entnehmen Sie der Datenschutzerklärung von Google unter <a href="https://policies.google.com/" class="text-accent-gold hover:underline">https://policies.google.com/</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Privacy Item 5 -->
+                        <div class="faq-item bg-black/20 rounded-lg">
+                            <button class="faq-trigger w-full text-left p-6 flex justify-between items-center">
+                                <span class="text-lg font-semibold text-accent-gold">5. Soziale Medien</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content faq-content px-6 pb-6 text-text-secondary space-y-4">
+                                <p>Auf dieser Website sind Elemente von sozialen Netzwerken (Facebook, Twitter, Instagram, LinkedIn) integriert. Wenn diese Elemente aktiv sind, wird eine direkte Verbindung zwischen Ihrem Endgerät und dem Server des jeweiligen Anbieters hergestellt.</p>
+                                <p>Soweit eine Einwilligung (Consent) eingeholt wurde, erfolgt der Einsatz des o. g. Dienstes auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 TTDSG. Die Einwilligung ist jederzeit widerrufbar.</p>
+                                <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details hierzu finden Sie in den jeweiligen Datenschutzerklärungen der Anbieter.</p>
+                            </div>
+                        </div>
+                        <!-- Privacy Item 6 -->
+                        <div class="faq-item bg-black/20 rounded-lg">
+                            <button class="faq-trigger w-full text-left p-6 flex justify-between items-center">
+                                <span class="text-lg font-semibold text-accent-gold">6. Analyse-Tools und Werbung</span>
+                                <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content faq-content px-6 pb-6 text-text-secondary space-y-4">
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Google Tag Manager</h4>
+                                    <p>Wir setzen den Google Tag Manager ein. Der Einsatz erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Google Analytics</h4>
+                                    <p>Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Die Nutzung dieses Dienstes erfolgt auf Grundlage Ihrer Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Google Ads</h4>
+                                    <p>Der Websitebetreiber verwendet Google Ads. Die Nutzung dieses Dienstes erfolgt auf Grundlage Ihrer Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">YouTube mit erweitertem Datenschutz</h4>
+                                    <p>Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Vimeo ohne Tracking (Do-Not-Track)</h4>
+                                    <p>Die Nutzung von Vimeo erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Google Maps</h4>
+                                    <p>Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und an einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Google reCAPTCHA</h4>
+                                    <p>Die Speicherung und Analyse der Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse daran, seine Webangebote vor missbräuchlicher automatisierter Ausspähung und vor SPAM zu schützen.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 py-12 px-4 border-t border-accent-gold/20">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-accent-gold">Центр психотерапии</h3>
+                    <p class="text-text-secondary mb-4">
+                        Профессиональная психологическая помощь с 2001 года
+                    </p>
+                    <p class="text-sm text-text-secondary">
+                        Sternstraße. 105 ,20357 Hamburg , Deutschland
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Контакты</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>WhatsApp: +491788079318</p>
+                        <p>Email: info777institut@gmail.com</p>
+                        <p>Режим работы: Пн-Сб 9:00-21:00</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
+                    <div class="space-y-2">
+                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
+                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-accent-gold/20 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 Центр системной психотерапии и феменологического коучинга.
+                    Руководитель: Dipl.- Psychologe Maksym Zhurin
+                </p>
+                <p class="text-sm text-text-secondary mt-2">
+                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
+<script src="main.js" defer></script>
+</body>
+</html>
+

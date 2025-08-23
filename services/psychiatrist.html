@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психиатры онлайн — консультации и лечение из любой точки Германии</title>
+    <meta name="description" content="Получите консультацию психиатра онлайн в Центре психотерапии и системного коучинга. Лечение депрессии, тревожности, биполярного расстройства. Конфиденциально">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#2D1B14',
+                        'accent-gold': '#FFD700',
+                        'text-secondary': '#B0B0B0',
+                        'nav-home': '#4CAF50',
+                        'nav-specialists': '#00BCD4',
+                        'nav-contacts': '#2196F3',
+                        'nav-psychiatrist': '#FF9800',
+                        'nav-psychologist': '#9C27B0',
+                        'nav-psychotherapy': '#009688',
+                        'nav-alcohol': '#E91E63',
+                        'nav-expertise': '#673AB7',
+                        'nav-coaching': '#FF5722',
+                        'nav-mobbing': '#4CAF50',
+                        'nav-sexual': '#F44336',
+                        'nav-branches': '#03A9F4',
+                        'nav-careers': '#F44336',
+                        'nav-impressum': '#8BC34A'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .hero-bg {
+            background-image: url('../hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-primary-bg text-white font-sans"></body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="../logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
+                    <span class="text-xl md:text-2xl font-bold text-accent-gold">
+                        Center für Coaching
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="../index" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
+                    <a href="../specialists" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши специалисты</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
+                            <span>Услуги</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="p-2">
+                                <a href="psychiatrist" class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Консультации клинического психолога ОНЛАЙН</a>
+                                <a href="psychologist" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации психолога ОНЛАЙН</a>
+                                <a href="psychotherapy" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия ОНЛАЙН</a>
+                                <a href="alcohol-coding" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Кодирование от алкоголизма в Германии</a>
+                                <a href="expertise" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь для подростков</a>
+                                <a href="coaching" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации коуча ОНЛАЙН</a>
+                                <a href="mobbing" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь при моббинге</a>
+                                <a href="sexual-therapy" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия сексуальных расстройств</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="../branches" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
+                    <a href="../vacancies" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
+                    <a href="../contact" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
+                    <a href="../impressum" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-black/95 backdrop-blur-sm z-50 transform translate-x-full transition-transform duration-300">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between p-4 border-b border-white/20">
+                    <span class="text-yellow-400 font-bold text-lg">Меню</span>
+                    <button id="mobile-menu-close" class="p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex-1 p-4 space-y-2">
+                    <a href="../index" class="block px-4 py-3 rounded-lg border border-blue-400/60 bg-blue-400/20 text-blue-400">Home</a>
+                    <a href="../specialists" class="block px-4 py-3 rounded-lg border border-orange-400/60 bg-orange-400/20 text-orange-400">Наши специалисты</a>
+                    
+                    <!-- Mobile Services Accordion -->
+                    <div class="space-y-2">
+                        <button id="mobile-services-btn" class="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-purple-400/60 bg-purple-400/20 text-purple-400">
+                            <span>Услуги</span>
+                            <svg id="mobile-services-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="mobile-services-menu" class="hidden space-y-1 pl-4">
+                            <a href="psychiatrist" class="block px-4 py-2 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Консультации клинического психолога ОНЛАЙН</a>
+                            <a href="psychologist" class="block px-4 py-2 rounded-lg text-white hover:bg-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="psychotherapy" class="block px-4 py-2 rounded-lg text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="alcohol-coding" class="block px-4 py-2 rounded-lg text-white hover:bg-white/10">Кодирование от алкоголизма</a>
+                            <a href="expertise" class="block px-4 py-2 rounded-lg text-white hover:bg-white/10">Клинико-психологическая экспертиза</a>
+                            <a href="coaching" class="block px-4 py-2 rounded-lg text-white hover:bg-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="mobbing" class="block px-4 py-2 rounded-lg text-white hover:bg-white/10">Помощь при моббинге</a>
+                            <a href="sexual-therapy" class="block px-4 py-2 rounded-lg text-white hover:bg-white/10">Терапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+
+                    <a href="../branches" class="block px-4 py-3 rounded-lg border border-cyan-400/60 bg-cyan-400/20 text-cyan-400">Филиалы</a>
+                    <a href="../vacancies" class="block px-4 py-3 rounded-lg border border-purple-400/60 bg-purple-400/20 text-purple-400">Вакансии</a>
+                    <a href="../contact" class="block px-4 py-3 rounded-lg border border-orange-400/60 bg-orange-400/20 text-orange-400">Контакты</a>
+                    <a href="../impressum" class="block px-4 py-3 rounded-lg border border-green-400/60 bg-green-400/20 text-green-400">Impressum</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="pt-20 pb-4 bg-black/20">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="../index" class="text-blue-400 hover:text-blue-300">Главная</a>
+                <span class="text-gray-400">></span>
+                <span class="text-gray-400">Услуги</span>
+                <span class="text-gray-400">></span>
+                <span class="text-white">Консультации клинического психолога ОНЛАЙН</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative min-h-[60vh] flex items-center">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Консультации клинического психолога ОНЛАЙН</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">Профессиональная медицинская помощь в области психического здоровья с возможностью онлайн консультаций</p>
+                <button onclick="openWhatsApp()" class="bg-yellow-400 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+                    ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4">
+            <!-- Service Description -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">О нашей услуге</h2>
+                    <div class="prose prose-lg prose-invert max-w-none">
+                        <p class="text-lg text-gray-300 mb-6">
+Наши квалифицированные психиатры предлагают онлайн-консультации, которые позволяют получать профессиональную помощь по вопросам психического здоровья, не покидая дома. Специализация включает диагностику, лечение и профилактику различных расстройств, таких как депрессия, тревожные расстройства, биполярное расстройство, шизофрения и другие.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-6">
+                            Онлайн-консультации обеспечивают поддержку независимо от местоположения, что особенно важно для людей с ограниченной мобильностью или тех, кто живет в отдаленных районах.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits -->
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Преимущества наших консультаций</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-black/20 p-6 rounded-lg border border-white/10">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Лицензированные специалисты</h3>
+                            <p class="text-gray-300">Все наши психиатры имеют действующие лицензии и многолетний опыт работы в области психиатрии и психотерапии.</p>
+                        </div>
+                        <div class="bg-black/20 p-6 rounded-lg border border-white/10">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Конфиденциальность</h3>
+                            <p class="text-gray-300">Строгое соблюдение врачебной тайны и защита персональных данных согласно GDPR</p>
+                        </div>
+                        <div class="bg-black/20 p-6 rounded-lg border border-white/10">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Гибкий график</h3>
+                            <p class="text-gray-300">Консультации доступны в удобное для вас время, включая вечерние часы и выходные. Мы предоставляем возможность записаться к психиатру онлайн в любое время.</p>
+                        </div>
+                        <div class="bg-black/20 p-6 rounded-lg border border-white/10">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Медицинские справки</h3>
+                            <p class="text-gray-300">Если необходимо, наши специалисты могут предоставить медицинские заключения или справки для работодателя.</p>
+                        </div>
+                        <div class="bg-black/20 p-6 rounded-lg border border-white/10">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Доступность</h3>
+                            <p class="text-gray-300">Наши онлайн консультации психиатра доступны не только в Германии, но и для клиентов из других стран ЕС.</p>
+                        </div>
+                        <div class="bg-black/20 p-6 rounded-lg border border-white/10">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Индивидуальный подход</h3>
+                            <p class="text-gray-300">Мы разрабатываем персонализированные планы лечения, учитывая особенности каждого пациента, что позволяет достичь наилучших результатов.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Как проходит консультация</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Запись на консультацию</h3>
+                                <p class="text-gray-300">Заполните форму заявки на сайте или позвоните нам. Мы подберём для вас удобное время для консультации с психиатром.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Подготовка к сессии</h3>
+                                <p class="text-gray-300">После записи мы отправим вам ссылку для видеосвязи и рекомендации по подготовке к консультации. Онлайн консультация психиатра проходит в комфортных для вас условиях.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Проведение консультации</h3>
+                                <p class="text-gray-300">Психиатр проведёт диагностическую беседу, оценит ваше состояние и предложит рекомендации. Наши специалисты проводят консультации с максимальным вниманием и профессионализмом.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-black font-bold">4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">План лечения</h3>
+                                <p class="text-gray-300">В случае необходимости, психиатр составит индивидуальный план лечения и предложит назначение повторных консультаций, чтобы обеспечить вам качественное и долгосрочное улучшение.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Стоимость консультаций</h2>
+                    <div class="bg-black/20 p-8 rounded-lg border border-white/10">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">Первичная консультация</h3>
+                                <p class="text-3xl font-bold text-yellow-400 mb-4">БЕСПЛАТНО</p>
+                                <p class="text-gray-300">Знакомство с врачом, первичная оценка состояния (30 минут)</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">Повторная консультация</h3>
+                                <p class="text-3xl font-bold text-yellow-400 mb-4">80€</p>
+                                <p class="text-gray-300">Полноценная консультация с диагностикой и рекомендациями (60 минут)</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-4 bg-yellow-400/10 rounded-lg border border-yellow-400/20">
+                            <p class="text-sm text-gray-300">
+                                <strong>Важно:</strong> Стоимость может варьироваться в зависимости от сложности случая. 
+                                Возможна оплата через страховку при наличии направления от семейного врача.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 py-12 px-4 border-t border-accent-gold/20">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-accent-gold">Центр психотерапии</h3>
+                    <p class="text-text-secondary mb-4">
+                        Профессиональная психологическая помощь с 2001 года
+                    </p>
+                    <p class="text-sm text-text-secondary">
+                        Sternstraße. 105 ,20357 Hamburg , Deutschland
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Контакты</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>WhatsApp: +491788079318</p>
+                        <p>Email: info777institut@gmail.com</p>
+                        <p>Режим работы: Пн-Сб 9:00-21:00</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
+                    <div class="space-y-2">
+                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
+                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-accent-gold/20 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 Центр системной психотерапии и феменологического коучинга.
+                    Руководитель: Dipl.- Psychologe Maksym Zhurin
+                </p>
+                <p class="text-sm text-text-secondary mt-2">
+                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
+<script src="../main.js" defer></script>
+</body>
+</html>

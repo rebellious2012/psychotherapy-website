@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психологи в городах Германии | Онлайн и офлайн | Центр психотерапии и системного коучинга</title>
+    <meta name="description" content="Выберите филиал или запишитесь на онлайн консультацию психолога и психотерапевта. Работаем по всей Германии.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#2D1B14',
+                        'accent-gold': '#FFD700',
+                        'text-secondary': '#B0B0B0'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            
+            mobileMenuBtn?.addEventListener('click', function() {
+                mobileMenu.classList.add('open');
+            });
+            
+            mobileMenuClose?.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+            });
+
+            // Mobile accordion functionality
+            const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+            accordionTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('svg');
+                    
+                    content.classList.toggle('open');
+                    icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+            });
+        });
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(45, 27, 20, 0.6), rgba(45, 27, 20, 0.6)), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.open {
+            max-height: 500px;
+        }
+
+        .branch-card {
+            transition: all 0.3s ease;
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+        }
+
+        .main-office {
+            border: 2px solid #FFD700;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
+        }
+
+        .main-office::before {
+            content: "Главный офис";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #FFD700;
+            color: #2D1B14;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-primary-bg text-white font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="logo.jpg" class="h-10 rounded-[20px]" alt="Логотип Центра психотерапии" />
+                    <span class="text-xl md:text-2xl font-bold text-accent-gold">
+                        Center für Coaching
+                    </span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="index" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
+                    <a href="specialists" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex items-center">
+                            Услуги
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-80 bg-primary-bg/95 backdrop-blur-sm border border-accent-gold/20 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="services/psychiatrist" class="block px-4 py-3 text-white hover:bg-white/10 transition-all rounded-t-lg border-b border-white/10">Консультации клинического психолога ОНЛАЙН</a>
+                            <a href="services/psychologist" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="services/psychotherapy" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="services/alcohol-coding" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Кодирование от алкоголизма в Германии</a>
+                            <a href="services/expertise" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психологическая помощь для подростков</a>
+                            <a href="services/coaching" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="services/mobbing" class="block px-4 py-3 text-white hover:bg-white/10 transition-all border-b border-white/10">Психологическая помощь при моббинге</a>
+                            <a href="services/sexual-therapy" class="block px-4 py-3 text-white hover:bg-white/10 transition-all rounded-b-lg">Психотерапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+                    
+                    <a href="branches" class="px-4 py-2 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Филиалы</a>
+                    <a href="vacancies" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Вакансии</a>
+                    <a href="contact" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Контакты</a>
+                    <a href="impressum" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Impressum</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-accent-gold text-primary-bg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
+            <div class="p-4">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-accent-gold">Меню</h2>
+                    <button id="mobile-menu-close" class="p-2 rounded-lg bg-accent-gold text-primary-bg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="space-y-2">
+                    <a href="index" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
+                    <a href="specialists" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
+                    
+                    <!-- Mobile Services Accordion -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger w-full text-left px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex justify-between items-center">
+                            Услуги
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content mt-2 space-y-1">
+                            <a href="services/psychiatrist" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации клинического психолога ОНЛАЙН</a>
+                            <a href="services/psychologist" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации психолога ОНЛАЙН</a>
+                            <a href="services/psychotherapy" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="services/alcohol-coding" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Кодирование от алкоголизма в Германии</a>
+                            <a href="services/expertise" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Клинико-психологическая экспертиза</a>
+                            <a href="services/coaching" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации коуча ОНЛАЙН</a>
+                            <a href="services/mobbing" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психологическая помощь при моббинге</a>
+                            <a href="services/sexual-therapy" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия сексуальных расстройств</a>
+                        </div>
+                    </div>
+                    
+                    <a href="branches" class="block px-4 py-3 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Филиалы</a>
+                    <a href="vacancies" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Вакансии</a>
+                    <a href="contact" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Контакты</a>
+                    <a href="impressum" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Impressum</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Breadcrumbs -->
+        <div class="bg-primary-bg/50 py-4">
+            <div class="container mx-auto px-4">
+                <nav class="flex items-center space-x-2 text-sm text-text-secondary">
+                    <a href="index" class="hover:text-accent-gold transition-colors">Главная</a>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span class="text-accent-gold">Наши филиалы в Германии</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-bg py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                    НАШИ ФИЛИАЛЫ В ГЕРМАНИИ
+                </h1>
+                <p class="text-xl md:text-2xl text-text-secondary mb-8">
+                    15 филиалов в крупнейших городах Германии
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div class="flex items-center space-x-2 text-accent-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span class="text-lg">Найдите ближайший к вам офис</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Branches Grid -->
+        <section class="py-20 bg-gradient-to-b from-primary-bg to-primary-bg/80">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Augsburg -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Augsburg</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Karlstraße 9, 86150 Augsburg</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Berlin -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Berlin</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Wilmersdorfer Str. 112, 10627 Berlin</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bremen -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Bremen</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Martinistraße 1, 28195 Bremen</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Düsseldorf -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Düsseldorf</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Königsallee 55-a, 40212 Düsseldorf</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dresden -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Dresden</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Leipziger Str. 40, 01127 Dresden</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hannover -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Hannover</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Am Klagesmarkt 10, 30159 Hannover</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hamburg (Main Office) -->
+                    <div class="branch-card main-office bg-white/5 backdrop-blur-sm rounded-xl p-6 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Hamburg</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Sternstraße 105, 20357 Hamburg</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">info777institut@gmail.com</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00, Вс - по договоренности</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Essen -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Essen</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Frintroper Str. 20, 45359 Essen</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frankfurt -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Frankfurt</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Kaiserstraße 1, 60311 Frankfurt</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- München -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">München</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Bayerstraße 21, 80335 München</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Köln -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Köln</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Kolumbastraße 10, 50667 Köln</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Karlsruhe -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Karlsruhe</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Hermann-Hesse-Straße 14, 76189 Karlsruhe</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nürnberg -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Nürnberg</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Regensburger Str. 36, 90478 Nürnberg</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stuttgart -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Stuttgart</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Marienplatz 4, 70178 Stuttgart</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ulm -->
+                    <div class="branch-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-accent-gold">Ulm</h3>
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-white">Neue Str. 44, 89073 Ulm</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-text-secondary">[Email]</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-text-secondary">Пн-Сб 9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Information -->
+        <section class="py-16 bg-primary-bg">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-accent-gold">
+                        Дополнительная информация
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                            <div class="flex items-center justify-center w-16 h-16 bg-accent-gold/20 rounded-full mx-auto mb-4">
+                                <svg class="w-8 h-8 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-white">Режим работы</h3>
+                            <p class="text-text-secondary">
+                                Все филиалы работают с понедельника по субботу с 9:00 до 21:00. 
+                                Главный офис в Гамбурге также принимает клиентов в воскресенье по предварительной договоренности.
+                            </p>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                            <div class="flex items-center justify-center w-16 h-16 bg-accent-gold/20 rounded-full mx-auto mb-4">
+                                <svg class="w-8 h-8 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-white">Запись на консультацию</h3>
+                            <p class="text-text-secondary">
+                                Для записи на консультацию в любом из наших филиалов свяжитесь с нами по WhatsApp 
+                                или через форму обратной связи на сайте. Первая консультация бесплатная.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 py-12 px-4 border-t border-accent-gold/20">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-accent-gold">Центр психотерапии</h3>
+                    <p class="text-text-secondary mb-4">
+                        Профессиональная психологическая помощь с 2001 года
+                    </p>
+                    <p class="text-sm text-text-secondary">
+                        Sternstraße. 105 ,20357 Hamburg , Deutschland
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Контакты</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>WhatsApp: +491788079318</p>
+                        <p>Email: info777institut@gmail.com</p>
+                        <p>Режим работы: Пн-Сб 9:00-21:00</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
+                    <div class="space-y-2">
+                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
+                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-accent-gold/20 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 Центр системной психотерапии и феменологического коучинга.
+                    Руководитель: Dipl.- Psychologe Maksym Zhurin
+                </p>
+                <p class="text-sm text-text-secondary mt-2">
+                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-d0da62bf-560b-4d55-be92-1ef3a46a86ce" data-elfsight-app-lazy></div>
+<script src="main.js" defer></script>
+</body>
+</html>

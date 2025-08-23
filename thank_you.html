@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо! | PsyHelper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#2D1B14',
+                        'accent-gold': '#FFD700',
+                        'text-light': '#FFFFFF',
+                        'text-secondary': '#B0B0B0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .redirect-message {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-primary-bg text-text-light font-sans">
+    <div class="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(45, 27, 20, 0.9), rgba(45, 27, 20, 0.9)), url('hero-bg.jpg');">
+        <div class="text-center p-8 bg-primary-bg/80 backdrop-blur-sm rounded-lg border border-accent-gold/30 shadow-lg max-w-lg mx-auto">
+            <h1 class="text-4xl font-bold text-accent-gold mb-4">Спасибо!</h1>
+            <p class="text-xl text-text-light mb-6">Ваше сообщение было успешно отправлено.</p>
+            <p class="text-text-secondary mb-8">Мы свяжемся с вами в ближайшее время.</p>
+            <a href="/"
+               class="inline-block bg-accent-gold text-primary-bg font-bold py-3 px-8 rounded-lg hover:bg-accent-gold/90 transition-all duration-300 transform hover:scale-105">
+                ВЕРНУТЬСЯ НА ГЛАВНУЮ
+            </a>
+            <p class="text-sm text-text-secondary mt-8 redirect-message">
+                Вы будете автоматически перенаправлены через <span id="countdown">5</span> секунд...
+            </p>
+        </div>
+    </div>
+    <script>
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = '/';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
