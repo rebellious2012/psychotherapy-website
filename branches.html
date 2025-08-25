@@ -6,6 +6,7 @@
     <title>Психологи в городах Германии | Онлайн и офлайн | Центр психотерапии и системного коучинга</title>
     <meta name="description" content="Выберите филиал или запишитесь на онлайн консультацию психолога и психотерапевта. Работаем по всей Германии.">
     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script>
         tailwind.config = {
             theme: {
@@ -22,34 +23,7 @@
             }
         }
     </script>
-    <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            
-            mobileMenuBtn?.addEventListener('click', function() {
-                mobileMenu.classList.add('open');
-            });
-            
-            mobileMenuClose?.addEventListener('click', function() {
-                mobileMenu.classList.remove('open');
-            });
 
-            // Mobile accordion functionality
-            const accordionTriggers = document.querySelectorAll('.accordion-trigger');
-            accordionTriggers.forEach(trigger => {
-                trigger.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    const icon = this.querySelector('svg');
-                    
-                    content.classList.toggle('open');
-                    icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
     <style>
         .hero-bg {
             background-image: linear-gradient(rgba(45, 27, 20, 0.6), rgba(45, 27, 20, 0.6)), url('hero-bg.jpg');
@@ -187,7 +161,7 @@
                             <a href="services/psychologist" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации психолога ОНЛАЙН</a>
                             <a href="services/psychotherapy" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия ОНЛАЙН</a>
                             <a href="services/alcohol-coding" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Кодирование от алкоголизма в Германии</a>
-                            <a href="services/expertise" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Клинико-психологическая экспертиза</a>
+                            <a href="services/expertise" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психологическая помощь для подростков</a>
                             <a href="services/coaching" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Консультации коуча ОНЛАЙН</a>
                             <a href="services/mobbing" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психологическая помощь при моббинге</a>
                             <a href="services/sexual-therapy" class="block px-4 py-2 rounded bg-white/5 text-white hover:bg-white/10 transition-all text-sm border border-white/10">Психотерапия сексуальных расстройств</a>
