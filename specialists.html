@@ -6,33 +6,8 @@
     <title>Русскоязычные психологи и психиатры в Германии | Центр психотерапии и системного коучинга</title>
     <meta name="description" content="Найдите проверенного психолога, психиатра или психотерапевта онлайн. Профессиональная помощь на русском языке в Германии.">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-bg': '#2D1B14',
-                        'accent-gold': '#FFD700',
-                        'text-secondary': '#B0B0B0',
-                        'nav-psychologist': '#9C27B0',
-                        'nav-psychotherapy': '#009688',
-                        'nav-alcohol': '#E91E63',
-                        'nav-expertise': '#673AB7',
-                        'nav-coaching': '#FF5722',
-                        'nav-mobbing': '#4CAF50',
-                        'nav-sexual': '#F44336',
-                        'nav-branches': '#03A9F4',
-                        'nav-careers': '#F44336',
-                        'nav-impressum': '#8BC34A'
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="./dist/tailwind.css" rel="stylesheet">
+ 
     <style>
         .hero-bg {
             background-image: linear-gradient(rgba(45, 27, 20, 0.6), rgba(45, 27, 20, 0.6)), url('hero-bg.jpg');
@@ -147,7 +122,7 @@
                 
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-1">
-                    <a href="index.html" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
+                    <a href="/" class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
                     <a href="specialists.html" class="px-4 py-2 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Наши специалисты</a>
                     
                     <!-- Services Dropdown -->
@@ -197,7 +172,7 @@
                 </div>
                 
                 <nav class="space-y-2">
-                    <a href="index" class="block px-4 py-3 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Home</a>
+                    <a href="/" class="block px-4 py-3 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Home</a>
                     <a href="specialists" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
                     
                     <!-- Mobile Services Accordion -->
@@ -235,7 +210,7 @@
         <div class="bg-primary-bg/50 py-4">
             <div class="container mx-auto px-4">
                 <nav class="flex items-center space-x-2 text-sm text-text-secondary">
-                    <a href="index.html" class="hover:text-accent-gold transition-colors">Главная</a>
+                    <a href="/" class="hover:text-accent-gold transition-colors">Главная</a>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
@@ -293,10 +268,9 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
 
                     <!-- Specialist 2 - Рафаэль Бисалиев -->
@@ -326,9 +300,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div> -->
 
                     <!-- Specialist 3 - Тамила Цымбалюк -->
@@ -365,9 +339,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
 
                     <!-- Specialist 4 - Виктория Постна -->
@@ -403,9 +377,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
 
                     <!-- Placeholder cards for remaining specialists -->
@@ -441,9 +415,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
 
                     <div class="bg-black/20 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-gold/20">
@@ -481,9 +455,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
                     <div class="bg-black/20 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-gold/20">
                         <div class="text-center mb-6">
@@ -519,9 +493,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
                     <div class="bg-black/20 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-gold/20">
                         <div class="text-center mb-6">
@@ -557,9 +531,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
                     <div class="bg-black/20 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-gold/20">
                         <div class="text-center mb-6">
@@ -596,9 +570,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
 
                     <div class="bg-black/20 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-gold/20">
@@ -636,9 +610,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
                     <div class="bg-black/20 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-gold/20">
                         <div class="text-center mb-6">
@@ -672,9 +646,9 @@
                             </div>
                         </div>
                         
-                        <button onclick="openWhatsApp()" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
-                        </button>
+                        <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="w-full mt-6 bg-accent-gold text-primary-bg px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                   ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                </a>
                     </div>
                 </div>
 

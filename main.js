@@ -76,22 +76,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 // JavaScript функция для открытия WhatsApp
-function openWhatsApp() {
-// Номер телефона (без + и пробелов)
-const phoneNumber = "491788079318";
+// function openWhatsApp() {
+// // Номер телефона (без + и пробелов)
+// const phoneNumber = "491788079318";
 
-// Готовое сообщение
-const message = encodeURIComponent(
-"Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. " +
-"Подскажите, пожалуйста, как можно записаться на ближайшее время?"
-);
+// // Готовое сообщение
+// const message = encodeURIComponent(
+// "Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. " +
+// "Подскажите, пожалуйста, как можно записаться на ближайшее время?"
+// );
 
-// Формируем ссылку
-const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+// // Формируем ссылку
+// const whatsappUrl = `https://wa.me/491788079318?text="Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. " +
+// "Подскажите, пожалуйста, как можно записаться на ближайшее время?"`;
 
-// Открываем WhatsApp
-window.open(whatsappUrl, '_blank');
-}
+// // Открываем WhatsApp
+// window.open(whatsappUrl, '_blank');
+// }
 // Contact form functionality
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {

@@ -5,22 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты PsyHelper | Онлайн психолог в Германии | Центр психотерапии и системного коучинга</title>
     <meta name="description" content="Свяжитесь с нами для записи на консультацию или вопросов. Онлайн помощь психолога и психиатра в Германии.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./dist/tailwind.css" rel="stylesheet">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
-     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-bg': '#2D1B14',
-                        'accent-gold': '#FFD700',
-                        'text-light': '#FFFFFF',
-                        'text-secondary': '#B0B0B0'
-                    }
-                }
-            }
-        }
-    </script>
+  
       <style>
         .mobile-menu {
             transform: translateX(100%);
@@ -40,7 +27,7 @@
         }
     </style>
 </head>
-<body class="bg-primary-bg text-text-light font-sans">
+<body class="bg-primary-bg text-white font-sans">
     <!-- Header -->
     
         <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
@@ -107,7 +94,7 @@
                 </div>
                 
                 <nav class="space-y-2">
-                    <a href="index" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
+                    <a href="/" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Home</a>
                     <a href="specialists" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
                     
                     <!-- Mobile Services Accordion -->
@@ -143,7 +130,7 @@
     <div class="pt-20 pb-4 bg-primary-bg">
         <div class="container mx-auto px-4">
             <nav class="text-sm">
-                <a href="index" class="text-accent-gold hover:text-accent-gold/80">Главная</a>
+                <a href="/" class="text-accent-gold hover:text-accent-gold/80">Главная</a>
                 <span class="mx-2 text-text-secondary">></span>
                 <span class="text-text-secondary">Контакты</span>
             </nav>
@@ -154,7 +141,7 @@
     <section class="relative py-20 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(45, 27, 20, 0.8), rgba(45, 27, 20, 0.8)), url('photo_2025-07-17_16-37-07.jpg');">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6 text-accent-gold">Контакты</h1>
-            <p class="text-xl md:text-2xl text-text-light max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto">
                 Свяжитесь с нами для получения профессиональной помощи
             </p>
         </div>
@@ -179,8 +166,8 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-accent-gold">Адрес</h3>
-                                    <p class="text-text-light">Sternstraße 105, 20357 Hamburg</p>
-                                    <p class="text-text-secondary text-sm">Основан в 2001 году, 15 филиалов в Германии</p>
+                                    <p class="text-white">Sternstraße 105, 20357 Hamburg</p>
+                                    <p class="text-gray-400 text-sm">Основан в 2001 году, 15 филиалов в Германии</p>
                                 </div>
                             </div>
 
@@ -192,7 +179,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-accent-gold">Телефон</h3>
-                                    <p class="text-text-light">+491788079318</p>
+                                    <p class="text-white">+491788079318</p>
                                 </div>
                             </div>
 
@@ -205,7 +192,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-accent-gold">Email</h3>
-                                    <p class="text-text-light">info777institut@gmail.com</p>
+                                    <p class="text-white">info777institut@gmail.com</p>
                                 </div>
                             </div>
 
@@ -217,9 +204,9 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-accent-gold">Часы работы</h3>
-                                    <p class="text-text-light">Пн-Пт: 8:00 - 20:00</p>
-                                    <p class="text-text-light">Сб: 9:00 - 16:00</p>
-                                    <p class="text-text-light">Вс: 10:00 - 14:00</p>
+                                    <p class="text-white">Пн-Пт: 8:00 - 20:00</p>
+                                    <p class="text-white">Сб: 9:00 - 16:00</p>
+                                    <p class="text-white">Вс: 10:00 - 14:00</p>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +215,7 @@
                     <!-- Additional Info -->
                     <div class="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-accent-gold/20">
                         <h2 class="text-2xl font-bold text-accent-gold mb-6">Дополнительная информация</h2>
-                        <div class="space-y-4 text-text-light">
+                        <div class="space-y-4 text-white">
                             <p>Наш центр предоставляет профессиональные услуги психотерапии и коучинга уже более 20 лет.</p>
                             <p>Мы работаем с клиентами по всей Германии через сеть из 15 филиалов и онлайн-консультации.</p>
                             <p>Все наши специалисты имеют соответствующие сертификаты и многолетний опыт работы.</p>
@@ -244,21 +231,21 @@
                         <div>
                             <label for="name" class="block text-sm font-medium text-accent-gold mb-2">Имя *</label>
                             <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-text-light placeholder-text-secondary focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all"
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all"
                                    placeholder="Введите ваше имя">
                         </div>
 
                         <div>
                             <label for="email" class="block text-sm font-medium text-accent-gold mb-2">E-Mail *</label>
                             <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-text-light placeholder-text-secondary focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all"
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all"
                                    placeholder="Введите ваш email">
                         </div>
 
                         <div>
                             <label for="specialist" class="block text-sm font-medium text-accent-gold mb-2">Выберите специалиста</label>
                             <select id="specialist" name="specialist" 
-                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-text-light focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all">
+                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all">
                                 <option value="">Любой специалист</option>
                                 <option value="maxim">Максим Журин (Руководитель центра)</option>
                                 <option value="anna">Анна Петрова (Врач-психиатр)</option>
@@ -272,7 +259,7 @@
                         <div>
                             <label for="message" class="block text-sm font-medium text-accent-gold mb-2">Сообщение *</label>
                             <textarea id="message" name="message" rows="5" required 
-                                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-text-light placeholder-text-secondary focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all resize-none"
+                                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all resize-none"
                                       placeholder="Опишите вашу ситуацию или вопрос"></textarea>
                         </div>
 
@@ -337,4 +324,3 @@
 
 </body>
 </html>
-

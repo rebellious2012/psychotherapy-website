@@ -6,7 +6,7 @@
     <title>Онлайн консультации психологов и психотерапевтов в Германии | Психологическая помощь онлайн	</title>
     <meta name="description" content="Запишитесь на консультацию к психологу или психотерапевту онлайн в Германии. Профессиональная помощь для русскоязычных — психотерапия и психиатрия онлайн">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./dist/tailwind.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -124,7 +124,7 @@
                 </div>
                 
                 <nav class="space-y-2">
-                    <a href="index" class="block px-4 py-3 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Home</a>
+                    <a href="/" class="block px-4 py-3 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30 transition-all border border-accent-gold/40">Home</a>
                     <a href="specialists" class="block px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20">Наши специалисты</a>
                     
                     <!-- Mobile Services Accordion -->
@@ -165,9 +165,9 @@
             <p class="text-2xl md:text-3xl mb-8 text-accent-gold font-semibold">
                 Primus inter Pares
             </p>
-            <button onclick="openWhatsApp()" class="bg-accent-gold text-primary-bg px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors">
-                ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
-            </button>
+            <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+                    ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                </a>
         </div>
     </section>
     

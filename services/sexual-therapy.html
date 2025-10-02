@@ -6,23 +6,8 @@
     <title>Семейные психологи для подростков — помощь в кризисе, конфликтах и адаптации | psyhelper.de</title>
     <meta name="description" content="Центр психотерапии и системного коучинга предлагает поддержку от семейных психологов для подростков и их родителей. Работа с конфликтами, тревожностью, низкой самооценкой и кризисами в семье. Анонимно, онлайн, с соблюдением GDPR">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
-     <script src="https://cdn.tailwindcss.com"></script>
-     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-bg': '#2D1B14',
-                        'accent-gold': '#FFD700',
-                        'text-secondary': '#B0B0B0',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+     <link href="../dist/tailwind.css" rel="stylesheet">
+   
     <style>
         body {
             font-family: 'Inter', system-ui, sans-serif;
@@ -68,7 +53,7 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-1">
-                    <a href="../index" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
+                    <a href="/" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
                     <a href="../specialists" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши специалисты</a>
                     
                     <!-- Services Dropdown -->
@@ -120,7 +105,7 @@
                     </button>
                 </div>
                 <nav class="space-y-2">
-                <a href="../index" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
+                <a href="./" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
                 <a href="../specialists" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши специалисты</a>
                 
                 <!-- Mobile Services Accordion -->
@@ -156,7 +141,7 @@
         <div class="container mx-auto px-4">
             <nav class="text-sm">
                 <ol class="flex items-center space-x-2 text-gray-400">
-                    <li><a href="../index" class="hover:text-yellow-400 transition-colors">Главная</a></li>
+                    <li><a href="/" class="hover:text-yellow-400 transition-colors">Главная</a></li>
                     <li><span class="mx-2">/</span></li>
                     <li><span class="text-gray-500">Услуги</span></li>
                     <li><span class="mx-2">/</span></li>
@@ -177,7 +162,7 @@
                 <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
                     Деликатная и профессиональная помощь в решении интимных проблем. Восстановление гармонии в сексуальной сфере жизни.
                 </p>
-                <a onclick="openWhatsApp()" href="#contact-form" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+                <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
                     ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
                 </a>
             </div>
