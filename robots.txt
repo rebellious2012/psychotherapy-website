@@ -1,2 +1,16 @@
 User-agent: *
-Disallow: /
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /*.pdf$
+Disallow: /*.doc$
+# Disallow: /*?*
+Disallow: /*.php$
+
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+Sitemap: https://psyhelper.de/sitemap.xml
+Host: https://psyhelper.de

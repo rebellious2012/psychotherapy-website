@@ -7,31 +7,20 @@
     <meta name="description" content="Запишитесь на консультацию к психологу или психотерапевту онлайн в Германии. Профессиональная помощь для русскоязычных — психотерапия и психиатрия онлайн">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="./dist/tailwind.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-bg': '#2D1B14',
-                        'accent-gold': '#FFD700',
-                        'text-secondary': '#B0B0B0',
-                     
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+ 
     <style>
         .hero-bg {
             background-image: linear-gradient(rgba(45, 27, 20, 0.6), rgba(45, 27, 20, 0.6)), url('hero-bg.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            /* background-attachment: fixed; */
         }
-        
+        .pt-48 {
+        padding-top: 12rem; /* 12 * 16px = 192px */
+    }
+    .pb-48 {
+        padding-bottom: 12rem; /* 12 * 16px = 192px */
+    }
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
@@ -157,7 +146,8 @@
     </header>
     
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-16">
+    <!-- <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-16"> -->
+        <section class="hero-bg flex items-center justify-center text-center px-4 pt-48 pb-48">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
                 Центр психотерапии и системного коучинга
