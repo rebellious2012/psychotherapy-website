@@ -16,3 +16,6 @@ RewriteRule ^(.+?)/?$ $1.html [L]
 # --- 4. Редирект с /page/ на /page (убираем лишний слэш) ---
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# --- Custom 404 page ---
+ErrorDocument 404 /404.html
