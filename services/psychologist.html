@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Психологическая терапия – помощь при тревоге, депрессии, стрессе | psyhelper.de</title>
-        <meta name="description" content="Центр психотерапии и системного коучинга предлагает квалифицированную психологическую терапию и консультацию психолога в Германии. Анонимно, онлайн, с соблюдением GDPR">    
- <link rel="icon" href="../favicon.ico" type="image/x-icon">
- <link href="../dist/tailwind.css" rel="stylesheet">
- 
-     <style>
+    <meta name="description"
+        content="Центр психотерапии и системного коучинга предлагает квалифицированную психологическую терапию и консультацию психолога в Германии. Анонимно, онлайн, с соблюдением GDPR">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="../dist/tailwind.css" rel="stylesheet">
+
+    <style>
         body {
             font-family: 'Inter', system-ui, sans-serif;
         }
+
         .hero-bg {
             background-image: url('../hero-bg.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
         }
-        
+
         .mobile-menu.open {
             transform: translateX(0);
         }
-        
+
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        
+
         .accordion-content.open {
             max-height: 500px;
         }
     </style>
 </head>
+
 <body class="bg-gray-900 text-white">
     <!-- Header -->
-     <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
@@ -52,85 +57,145 @@
                 </div>
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-1">
-                    <a href="/" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
-                    <a href="../specialists" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши специалисты</a>
-                    
+                    <a href="/"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
+                    <a href="../specialists"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши
+                        специалисты</a>
+
                     <!-- Services Dropdown -->
                     <div class="relative group">
-                        <button class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
+                        <button
+                            class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
                             <span>Услуги</span>
-                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <div class="p-2">
-                                <a href="psychiatrist" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации клинического психолога ОНЛАЙН</a>
-                                <a href="psychologist" class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Консультации психолога ОНЛАЙН</a>
-                                <a href="psychotherapy" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия ОНЛАЙН</a>
-                                <a href="alcohol-coding" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Кодирование от алкоголизма в Германии</a>
-                                <a href="expertise" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь для подростков</a>
-                                <a href="coaching" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации коуча ОНЛАЙН</a>
-                                <a href="mobbing" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь при моббинге</a>
-                                <a href="sexual-therapy" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия сексуальных расстройств</a>
+                                <a href="psychiatrist"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации
+                                    клинического психолога ОНЛАЙН</a>
+                                <a href="psychologist"
+                                    class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Консультации
+                                    психолога ОНЛАЙН</a>
+                                <a href="psychotherapy"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия
+                                    ОНЛАЙН</a>
+                                <a href="alcohol-coding"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Кодирование
+                                    от алкоголизма в Германии</a>
+                                <a href="mpu-preparation.html"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Подготовка
+                                    к MPU</a>
+                                <a href="expertise"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая
+                                    помощь для подростков</a>
+                                <a href="coaching"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации
+                                    коуча ОНЛАЙН</a>
+                                <a href="mobbing"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая
+                                    помощь при моббинге</a>
+                                <a href="sexual-therapy"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия
+                                    сексуальных расстройств</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <a href="../branches" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
-                    <a href="../vacancies" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
-                    <a href="../contact" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
-                    <a href="../impressum" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
+
+                    <a href="../branches"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
+                    <a href="../vacancies"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
+                    <a href="../contact"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
+                    <a href="../impressum"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-       <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
+        <div id="mobile-menu"
+            class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
             <div class="p-4">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-xl font-bold text-accent-gold">Меню</h2>
                     <button id="mobile-menu-close" class="p-2 rounded-lg bg-accent-gold text-primary-bg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
                 </div>
                 <nav class="space-y-2">
-                <a href="/" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
-                <a href="../specialists" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши специалисты</a>
-                
-                <!-- Mobile Services Accordion -->
-                <div class="border border-yellow-400/60 rounded-lg">
-                    <button id="mobile-services-btn" class="accordion-trigger w-full px-4 py-3 bg-yellow-400/20 text-yellow-400 rounded-lg flex items-center justify-between">
-                        <span>Услуги</span>
-                        <svg id="mobile-services-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div id="mobile-services-menu" class="accordion-content px-2 pb-2 space-y-1">
-                        <a href="psychiatrist" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации клинического психолога ОНЛАЙН</a>
-                        <a href="psychologist" class="block px-4 py-2 rounded bg-yellow-400/20 text-yellow-400">Консультации психолога ОНЛАЙН</a>
-                        <a href="psychotherapy" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
-                        <a href="alcohol-coding" class="block px-4 py-2 rounded text-white hover:bg-white/10">Кодирование от алкоголизма в Германии</a>
-                        <a href="expertise" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь для подростков</a>
-                        <a href="coaching" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации коуча ОНЛАЙН</a>
-                        <a href="mobbing" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь при моббинге</a>
-                        <a href="sexual-therapy" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия сексуальных расстройств</a>
+                    <a href="/"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
+                    <a href="../specialists"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши
+                        специалисты</a>
+
+                    <!-- Mobile Services Accordion -->
+                    <div class="border border-yellow-400/60 rounded-lg">
+                        <button id="mobile-services-btn"
+                            class="accordion-trigger w-full px-4 py-3 bg-yellow-400/20 text-yellow-400 rounded-lg flex items-center justify-between">
+                            <span>Услуги</span>
+                            <svg id="mobile-services-icon" class="w-4 h-4 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="mobile-services-menu" class="accordion-content px-2 pb-2 space-y-1">
+                            <a href="psychiatrist"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации клинического
+                                психолога ОНЛАЙН</a>
+                            <a href="psychologist"
+                                class="block px-4 py-2 rounded bg-yellow-400/20 text-yellow-400">Консультации психолога
+                                ОНЛАЙН</a>
+                            <a href="psychotherapy"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="alcohol-coding"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Кодирование от алкоголизма
+                                в Германии</a>
+                            <a href="mpu-preparation.html"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Подготовка к MPU</a>
+                            <a href="expertise"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь для
+                                подростков</a>
+                            <a href="coaching" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации
+                                коуча ОНЛАЙН</a>
+                            <a href="mobbing"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь при
+                                моббинге</a>
+                            <a href="sexual-therapy"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия сексуальных
+                                расстройств</a>
+                        </div>
                     </div>
-                </div>
-                
-                <a href="../branches" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Филиалы</a>
-                <a href="../vacancies" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Вакансии</a>
-                <a href="../contact" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Контакты</a>
-                <a href="../impressum" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Impressum</a>
+
+                    <a href="../branches"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Филиалы</a>
+                    <a href="../vacancies"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Вакансии</a>
+                    <a href="../contact"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Контакты</a>
+                    <a href="../impressum"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Impressum</a>
                 </nav>
             </div>
         </div>
@@ -160,9 +225,12 @@
                     Консультации психолога ОНЛАЙН
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-                    Профессиональная психологическая помощь в удобном онлайн-формате. Работаем с эмоциональными проблемами, стрессом, тревожностью и личностным развитием.
+                    Профессиональная психологическая помощь в удобном онлайн-формате. Работаем с эмоциональными
+                    проблемами, стрессом, тревожностью и личностным развитием.
                 </p>
-                <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+                <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'"
+                    target="_blank"
+                    class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
                     ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
                 </a>
             </div>
@@ -175,16 +243,25 @@
             <!-- Service Description -->
             <section class="mb-16">
                 <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">О наших онлайн-консультациях психолога</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">О наших онлайн-консультациях
+                        психолога</h2>
                     <div class="prose prose-lg text-gray-300 space-y-6">
                         <p>
-                            Онлайн-консультации с психологом — это современный и удобный способ получить квалифицированную психологическую помощь, не выходя из дома. Наши опытные и сертифицированные психологи проводят индивидуальные сессии через защищённые видеоплатформы, обеспечивая полную конфиденциальность и комфорт.
+                            Онлайн-консультации с психологом — это современный и удобный способ получить
+                            квалифицированную психологическую помощь, не выходя из дома. Наши опытные и
+                            сертифицированные психологи проводят индивидуальные сессии через защищённые видеоплатформы,
+                            обеспечивая полную конфиденциальность и комфорт.
                         </p>
                         <p>
-                            Мы работаем с широким спектром психологических проблем, включая стресс, тревожность, депрессивные состояния, проблемы в отношениях, профессиональное выгорание, кризисы личности и многое другое. Наши психологи специализируются на различных областях психотерапевтической помощи и предлагают психологическую терапию онлайн для людей, которым нужно преодолеть эмоциональные трудности.
+                            Мы работаем с широким спектром психологических проблем, включая стресс, тревожность,
+                            депрессивные состояния, проблемы в отношениях, профессиональное выгорание, кризисы личности
+                            и многое другое. Наши психологи специализируются на различных областях психотерапевтической
+                            помощи и предлагают психологическую терапию онлайн для людей, которым нужно преодолеть
+                            эмоциональные трудности.
                         </p>
                         <p>
-                            Не важно, ищете ли вы консультацию психолога онлайн, или вам нужно найти психолога для регулярной терапии, мы готовы помочь.
+                            Не важно, ищете ли вы консультацию психолога онлайн, или вам нужно найти психолога для
+                            регулярной терапии, мы готовы помочь.
                         </p>
                     </div>
                 </div>
@@ -193,62 +270,84 @@
             <!-- Benefits -->
             <section class="mb-16">
                 <div class="max-w-6xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Преимущества онлайн-консультаций психолога</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Преимущества
+                        онлайн-консультаций психолога</h2>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Удобство и гибкость</h3>
-                            <p class="text-gray-300">Консультации доступны в удобное для вас время, без необходимости тратить время на дорогу. Воспользуйтесь онлайн консультацией с психологом, чтобы получить помощь прямо из дома.</p>
+                            <p class="text-gray-300">Консультации доступны в удобное для вас время, без необходимости
+                                тратить время на дорогу. Воспользуйтесь онлайн консультацией с психологом, чтобы
+                                получить помощь прямо из дома.</p>
                         </div>
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Конфиденциальность</h3>
-                            <p class="text-gray-300">Мы гарантируем полную анонимность и защиту персональных данных в соответствии с европейскими стандартами. Все данные передаются через защищённые каналы, обеспечивая полную безопасность.</p>
+                            <p class="text-gray-300">Мы гарантируем полную анонимность и защиту персональных данных в
+                                соответствии с европейскими стандартами. Все данные передаются через защищённые каналы,
+                                обеспечивая полную безопасность.</p>
                         </div>
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Быстрый доступ</h3>
-                            <p class="text-gray-300">Получить помощь можно в кратчайшие сроки, без длительного ожидания. Вам достаточно записаться на срочную консультацию психолога онлайн, и мы подберем удобное время.</p>
+                            <p class="text-gray-300">Получить помощь можно в кратчайшие сроки, без длительного ожидания.
+                                Вам достаточно записаться на срочную консультацию психолога онлайн, и мы подберем
+                                удобное время.</p>
                         </div>
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Комфортная обстановка</h3>
-                            <p class="text-gray-300">Консультации проходят в привычной домашней обстановке, что способствует более открытому общению и более эффективному решению проблем.</p>
+                            <p class="text-gray-300">Консультации проходят в привычной домашней обстановке, что
+                                способствует более открытому общению и более эффективному решению проблем.</p>
                         </div>
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Профессиональный подход</h3>
-                            <p class="text-gray-300">Все наши психологи — сертифицированные специалисты с многолетним опытом работы. Мы используем самые актуальные методы психологической поддержки и терапии для решения ваших проблем.</p>
+                            <p class="text-gray-300">Все наши психологи — сертифицированные специалисты с многолетним
+                                опытом работы. Мы используем самые актуальные методы психологической поддержки и терапии
+                                для решения ваших проблем.</p>
                         </div>
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Доступная стоимость</h3>
-                            <p class="text-gray-300">Мы предлагаем психологические консультации онлайн по доступным ценам, что позволяет каждому получить качественную помощь, не выходя из дома.</p>
+                            <p class="text-gray-300">Мы предлагаем психологические консультации онлайн по доступным
+                                ценам, что позволяет каждому получить качественную помощь, не выходя из дома.</p>
                         </div>
                     </div>
                 </div>
@@ -257,42 +356,54 @@
             <!-- Process -->
             <section class="mb-16">
                 <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Как проходит консультация</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Как проходит
+                        консультация</h2>
                     <div class="space-y-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">1</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Запись на консультацию</h3>
-                                <p class="text-gray-300">Заполните форму заявки или свяжитесь с нами по телефону. Мы подберём удобное время для онлайн консультации психолога.</p>
+                                <p class="text-gray-300">Заполните форму заявки или свяжитесь с нами по телефону. Мы
+                                    подберём удобное время для онлайн консультации психолога.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">2</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Подготовка к сессии</h3>
-                                <p class="text-gray-300">После записи мы отправим вам ссылку для подключения и рекомендации по подготовке к сессии. Убедитесь в стабильном интернет-соединении для комфортного общения.</p>
+                                <p class="text-gray-300">После записи мы отправим вам ссылку для подключения и
+                                    рекомендации по подготовке к сессии. Убедитесь в стабильном интернет-соединении для
+                                    комфортного общения.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">3</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Проведение консультации</h3>
-                                <p class="text-gray-300">Сессия длится 50 минут. Психолог проведёт диагностику, оценит ваше состояние и предложит план работы. Важно отметить, что консультация с психологом онлайн будет направлена на поиск конкретных решений ваших проблем.</p>
+                                <p class="text-gray-300">Сессия длится 50 минут. Психолог проведёт диагностику, оценит
+                                    ваше состояние и предложит план работы. Важно отметить, что консультация с
+                                    психологом онлайн будет направлена на поиск конкретных решений ваших проблем.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">4</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Последующая работа</h3>
-                                <p class="text-gray-300">После первой консультации мы можем назначить регулярные сессии для продолжения работы, а также дать домашние задания для закрепления результатов.</p>
+                                <p class="text-gray-300">После первой консультации мы можем назначить регулярные сессии
+                                    для продолжения работы, а также дать домашние задания для закрепления результатов.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -316,9 +427,12 @@
                                 <p class="text-gray-300">Экономия €50</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 mt-6">Первая консультация может быть проведена бесплатно для оценки совместимости с психологом</p>
-            <p class="text-gray-400 mt-6">Не откладывайте на завтра то, что можно начать уже сегодня. Запишитесь на консультацию с психологом и получите поддержку именно в тот момент, когда это нужно.</p>                    
-           </div>
+                        <p class="text-gray-400 mt-6">Первая консультация может быть проведена бесплатно для оценки
+                            совместимости с психологом</p>
+                        <p class="text-gray-400 mt-6">Не откладывайте на завтра то, что можно начать уже сегодня.
+                            Запишитесь на консультацию с психологом и получите поддержку именно в тот момент, когда это
+                            нужно.</p>
+                    </div>
                 </div>
             </section>
         </div>
@@ -350,10 +464,15 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
                     <div class="space-y-2">
-                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
-                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
-                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
-                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                        <a href="/specialists"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Наши
+                            специалисты</a>
+                        <a href="/branches"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
                     </div>
                 </div>
             </div>
@@ -364,13 +483,15 @@
                     Руководитель: Dipl.- Psychologe Maksym Zhurin
                 </p>
                 <p class="text-sm text-text-secondary mt-2">
-                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                    Разработка сайта: <a href="https://codelevator.top"
+                        class="text-accent-gold hover:underline">Codelevator</a>
                 </p>
             </div>
         </div>
     </footer>
     <script src="../main.js" defer></script>
-<script src="../chat-widget.js" defer></script>
+    <script src="../chat-widget.js" defer></script>
 
 </body>
+
 </html>

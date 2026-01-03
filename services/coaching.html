@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Персональный коучинг – индивидуальные сессии для личного роста и достижения целей |	psyhelper.de</title>
-<meta name="description" content="Центр психотерапии и системного коучинга предлагает персональный коучинг для развития уверенности, управления стрессом и достижения жизненных целей. Индивидуальный подход, конфиденциальность, онлайн-формат. Запишитесь на первую консультацию">
-	   <link rel="icon" href="../favicon.ico" type="image/x-icon">
-        <link href="../dist/tailwind.css" rel="stylesheet">
-   
+    <title>Персональный коучинг – индивидуальные сессии для личного роста и достижения целей | psyhelper.de</title>
+    <meta name="description"
+        content="Центр психотерапии и системного коучинга предлагает персональный коучинг для развития уверенности, управления стрессом и достижения жизненных целей. Индивидуальный подход, конфиденциальность, онлайн-формат. Запишитесь на первую консультацию">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="../dist/tailwind.css" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Inter', system-ui, sans-serif;
         }
+
         .hero-bg {
             background-image: url('../hero-bg.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-           .mobile-menu {
+
+        .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
         }
-        
+
         .mobile-menu.open {
             transform: translateX(0);
         }
-        
+
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        
+
         .accordion-content.open {
             max-height: 500px;
         }
-    </style>	
+    </style>
 </head>
+
 <body class="bg-gray-900 text-white">
     <!-- Header -->
-     <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
-       <div class="container mx-auto px-4">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
+        <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
@@ -53,86 +58,148 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-1">
-                    <a href="/" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
-                    <a href="../specialists" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши специалисты</a>
-                    
+                    <a href="/"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
+                    <a href="../specialists"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши
+                        специалисты</a>
+
                     <!-- Services Dropdown -->
                     <div class="relative group">
-                        <button class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
+                        <button
+                            class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
                             <span>Услуги</span>
-                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <div class="p-2">
-                                <a href="psychiatrist" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации клинического психолога ОНЛАЙН</a>
-                                <a href="psychologist" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации психолога ОНЛАЙН</a>
-                                <a href="psychotherapy" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия ОНЛАЙН</a>
-                                <a href="alcohol-coding" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Кодирование от алкоголизма в Германии</a>
-                                <a href="expertise" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь для подростков</a>
-                                <a href="coaching" class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Консультации коуча ОНЛАЙН</a>
-                                <a href="mobbing" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь при моббинге</a>
-                                <a href="sexual-therapy" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия сексуальных расстройств</a>
+                                <a href="psychiatrist"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации
+                                    клинического психолога ОНЛАЙН</a>
+                                <a href="psychologist"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации
+                                    психолога ОНЛАЙН</a>
+                                <a href="psychotherapy"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия
+                                    ОНЛАЙН</a>
+                                <a href="alcohol-coding"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Кодирование
+                                    от алкоголизма в Германии</a>
+                                <a href="mpu-preparation.html"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Подготовка
+                                    к MPU</a>
+                                <a href="expertise"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая
+                                    помощь для подростков</a>
+                                <a href="coaching"
+                                    class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Консультации
+                                    коуча ОНЛАЙН</a>
+                                <a href="mobbing"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая
+                                    помощь при моббинге</a>
+                                <a href="sexual-therapy"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия
+                                    сексуальных расстройств</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <a href="../branches" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
-                    <a href="../vacancies" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
-                    <a href="../contact" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
-                    <a href="../impressum" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
+
+                    <a href="../branches"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
+                    <a href="../vacancies"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
+                    <a href="../contact"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
+                    <a href="../impressum"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-           <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
+        <div id="mobile-menu"
+            class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
             <div class="p-4">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-xl font-bold text-accent-gold">Меню</h2>
                     <button id="mobile-menu-close" class="p-2 rounded-lg bg-accent-gold text-primary-bg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
                 </div>
                 <nav class="space-y-2">
-                <a href="/" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
-                <a href="../specialists" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши специалисты</a>
-                
-                <!-- Mobile Services Accordion -->
-                <div class="accordion-item">
-                        <button class="accordion-trigger w-full text-left px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex justify-between items-center">
+                    <a href="/"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
+                    <a href="../specialists"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши
+                        специалисты</a>
+
+                    <!-- Mobile Services Accordion -->
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-trigger w-full text-left px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex justify-between items-center">
                             Услуги
-                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
-                    </button>
+                        </button>
                         <div class="accordion-content mt-2 space-y-1">
-                        <a href="psychiatrist" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации клинического психолога ОНЛАЙН</a>
-                        <a href="psychologist" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации психолога ОНЛАЙН</a>
-                        <a href="psychotherapy" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
-                        <a href="alcohol-coding" class="block px-4 py-2 rounded text-white hover:bg-white/10">Кодирование от алкоголизма в Германии</a>
-                        <a href="expertise" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь для подростков</a>
-                        <a href="coaching" class="block px-4 py-2 rounded bg-yellow-400/20 text-yellow-400">Консультации коуча ОНЛАЙН</a>
-                        <a href="mobbing" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь при моббинге</a>
-                        <a href="sexual-therapy" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия сексуальных расстройств</a>
+                            <a href="psychiatrist"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации клинического
+                                психолога ОНЛАЙН</a>
+                            <a href="psychologist"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации психолога
+                                ОНЛАЙН</a>
+                            <a href="psychotherapy"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="alcohol-coding"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Кодирование от алкоголизма
+                                в Германии</a>
+                            <a href="mpu-preparation.html"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Подготовка к MPU</a>
+                            <a href="expertise"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь для
+                                подростков</a>
+                            <a href="coaching"
+                                class="block px-4 py-2 rounded bg-yellow-400/20 text-yellow-400">Консультации коуча
+                                ОНЛАЙН</a>
+                            <a href="mobbing"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь при
+                                моббинге</a>
+                            <a href="sexual-therapy"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия сексуальных
+                                расстройств</a>
+                        </div>
                     </div>
-                </div>
-                
-                <a href="../branches" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Филиалы</a>
-                <a href="../vacancies" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Вакансии</a>
-                <a href="../contact" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Контакты</a>
-                <a href="../impressum" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Impressum</a>
-            </nav> </div>
+
+                    <a href="../branches"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Филиалы</a>
+                    <a href="../vacancies"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Вакансии</a>
+                    <a href="../contact"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Контакты</a>
+                    <a href="../impressum"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Impressum</a>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -160,9 +227,12 @@
                     Консультации коуча ОНЛАЙН
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-                    Профессиональный коучинг для достижения личных и профессиональных целей. Раскройте свой потенциал с помощью системного подхода.
+                    Профессиональный коучинг для достижения личных и профессиональных целей. Раскройте свой потенциал с
+                    помощью системного подхода.
                 </p>
-                <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+                <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'"
+                    target="_blank"
+                    class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
                     ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
                 </a>
             </div>
@@ -178,127 +248,164 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">О коучинге онлайн</h2>
                     <div class="prose prose-lg text-gray-300 space-y-6">
                         <p>
-                            Онлайн-коучинг — это эффективный и гибкий способ для личностного и профессионального роста, который позволяет достигать поставленных целей, преодолевать препятствия и раскрывать свой потенциал. Наши сертифицированные коучи используют проверенные методики для создания индивидуальных программ, которые обеспечат результат. Если вы хотите найти коуча онлайн, мы предлагаем онлайн-формат для удобства и доступности консультаций.
+                            Онлайн-коучинг — это эффективный и гибкий способ для личностного и профессионального роста,
+                            который позволяет достигать поставленных целей, преодолевать препятствия и раскрывать свой
+                            потенциал. Наши сертифицированные коучи используют проверенные методики для создания
+                            индивидуальных программ, которые обеспечат результат. Если вы хотите найти коуча онлайн, мы
+                            предлагаем онлайн-формат для удобства и доступности консультаций.
                         </p>
                         <p>
-                            Мы специализируемся на карьерном коучинге, лайф-коучинге, бизнес-коучинге и коучинге отношений. Работая с руководителями, предпринимателями, специалистами различных сфер, а также с людьми, стремящимися к личностному росту, мы помогаем делать прорывы в жизни и работе.
+                            Мы специализируемся на карьерном коучинге, лайф-коучинге, бизнес-коучинге и коучинге
+                            отношений. Работая с руководителями, предпринимателями, специалистами различных сфер, а
+                            также с людьми, стремящимися к личностному росту, мы помогаем делать прорывы в жизни и
+                            работе.
                         </p>
                     </div>
                 </div>
             </section>
 
             <!-- Coaching Types -->
-<section class="mb-16">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Направления коучинга</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"></path>
-                    </svg>
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Направления коучинга
+                    </h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Карьерный коучинг</h3>
+                            <p class="text-gray-300">Поможем в поиске призвания, планировании карьеры и развитии
+                                профессиональных навыков. Это идеальный выбор для тех, кто ищет личного коуча для
+                                улучшения карьерного пути.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Лайф-коучинг</h3>
+                            <p class="text-gray-300">Если вы стремитесь к самореализации, улучшению баланса работы и
+                                личной жизни, лайф-коуч поможет вам добиться гармонии и исполнить жизненные цели.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Бизнес-коучинг</h3>
+                            <p class="text-gray-300">Нужен бизнес коуч для развития лидерских качеств и управления
+                                командой? Мы работаем с предпринимателями и компаниями, помогая им строить эффективные
+                                стратегии и управлять бизнесом с уверенностью.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Финансовый коучинг</h3>
+                            <p class="text-gray-300">Для тех, кто ищет путь к финансовой свободе, наш финансовый коучинг
+                                поможет преодолеть ментальные блоки и двигаться к реальным финансовым результатам.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">LOGO и нейро-коучинг</h3>
+                            <p class="text-gray-300">Мы предлагаем мета-трансформацию через работы с личностным
+                                сценарием, а также раскрытие потенциала с помощью нейро-коучинга.</p>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Коучинг изменений</h3>
+                            <p class="text-gray-300">Если вы сталкиваетесь с переменами в жизни или кризисами, коучинг
+                                изменений поможет адаптироваться к новым условиям и открыть новые возможности.</p>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Карьерный коучинг</h3>
-                <p class="text-gray-300">Поможем в поиске призвания, планировании карьеры и развитии профессиональных навыков. Это идеальный выбор для тех, кто ищет личного коуча для улучшения карьерного пути.</p>
-            </div>
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Лайф-коучинг</h3>
-                <p class="text-gray-300">Если вы стремитесь к самореализации, улучшению баланса работы и личной жизни, лайф-коуч поможет вам добиться гармонии и исполнить жизненные цели.</p>
-            </div>
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Бизнес-коучинг</h3>
-                <p class="text-gray-300">Нужен бизнес коуч для развития лидерских качеств и управления командой? Мы работаем с предпринимателями и компаниями, помогая им строить эффективные стратегии и управлять бизнесом с уверенностью.</p>
-            </div>
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Финансовый коучинг</h3>
-                <p class="text-gray-300">Для тех, кто ищет путь к финансовой свободе, наш финансовый коучинг поможет преодолеть ментальные блоки и двигаться к реальным финансовым результатам.</p>
-            </div>
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">LOGO и нейро-коучинг</h3>
-                <p class="text-gray-300">Мы предлагаем мета-трансформацию через работы с личностным сценарием, а также раскрытие потенциала с помощью нейро-коучинга.</p>
-            </div>
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Коучинг изменений</h3>
-                <p class="text-gray-300">Если вы сталкиваетесь с переменами в жизни или кризисами, коучинг изменений поможет адаптироваться к новым условиям и открыть новые возможности.</p>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
-<!-- Extended Coaching Programs -->
-<section class="mb-16">
-    <div class="max-w-6xl mx-auto space-y-12">
-        <div class="bg-black/30 p-8 rounded-lg border border-yellow-400/30">
-            <h3 class="text-2xl font-bold mb-4 text-yellow-400">💼 Бизнес-коучинг</h3>
-            <p class="text-gray-300 mb-4">Развитие лидерских качеств, управление командой, стратегическое планирование — всё это вы получите через работу с нашим бизнес-коучем. Совместно с вами мы проведем диагностику проблем бизнеса и поможем создать и реализовать успешный бизнес-план.</p>
-            <p class="text-yellow-400 font-medium">
-                Проведём диагностику проблем вашего бизнеса с бизнес-коучем и психологом. Поможем создать и реализовать работающий бизнес-план.
-            </p>
-        </div>
+            <!-- Extended Coaching Programs -->
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto space-y-12">
+                    <div class="bg-black/30 p-8 rounded-lg border border-yellow-400/30">
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">💼 Бизнес-коучинг</h3>
+                        <p class="text-gray-300 mb-4">Развитие лидерских качеств, управление командой, стратегическое
+                            планирование — всё это вы получите через работу с нашим бизнес-коучем. Совместно с вами мы
+                            проведем диагностику проблем бизнеса и поможем создать и реализовать успешный бизнес-план.
+                        </p>
+                        <p class="text-yellow-400 font-medium">
+                            Проведём диагностику проблем вашего бизнеса с бизнес-коучем и психологом. Поможем создать и
+                            реализовать работающий бизнес-план.
+                        </p>
+                    </div>
 
-        <div class="bg-gradient-to-br from-blue-900/40 to-blue-800/30 p-8 rounded-lg border border-blue-400/30">
-            <h3 class="text-2xl font-bold mb-4 text-blue-400">💰 Индивидуальный курс финансового коучинга</h3>
-            <p class="text-blue-200 mb-4">Ваш путь к финансовому успеху:</p>
-            <ol class="list-decimal list-inside space-y-2 text-gray-300 ml-4">
-                <li>Определение истинного запроса клиента</li>
-                <li>Создание структуры мышления, настроенного на финансовый успех</li>
-                <li>Поиск реальных инструментов для преодоления финансового потолка</li>
-                <li>Преодоление бессознательных ментальных финансовых блокад</li>
-                <li>Приведение к реальным финансовым результатам</li>
-            </ol>
-            <p class="mt-4 text-gray-300">
-                <strong>5 сессий</strong> с сертифицированным коучем ICF. <br>
-                <span class="text-red-400 line-through">550 €</span> <span class="text-green-400 font-bold">490 €</span>
-            </p>
-        </div>
+                    <div
+                        class="bg-gradient-to-br from-blue-900/40 to-blue-800/30 p-8 rounded-lg border border-blue-400/30">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-400">💰 Индивидуальный курс финансового коучинга
+                        </h3>
+                        <p class="text-blue-200 mb-4">Ваш путь к финансовому успеху:</p>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-300 ml-4">
+                            <li>Определение истинного запроса клиента</li>
+                            <li>Создание структуры мышления, настроенного на финансовый успех</li>
+                            <li>Поиск реальных инструментов для преодоления финансового потолка</li>
+                            <li>Преодоление бессознательных ментальных финансовых блокад</li>
+                            <li>Приведение к реальным финансовым результатам</li>
+                        </ol>
+                        <p class="mt-4 text-gray-300">
+                            <strong>5 сессий</strong> с сертифицированным коучем ICF. <br>
+                            <span class="text-red-400 line-through">550 €</span> <span
+                                class="text-green-400 font-bold">490 €</span>
+                        </p>
+                    </div>
 
-        <div class="bg-gradient-to-br from-purple-900/40 to-purple-800/30 p-8 rounded-lg border border-purple-400/30">
-            <h3 class="text-2xl font-bold mb-4 text-purple-400">🧠 Персональный курс LOGO и нейро-коучинга</h3>
-            <p class="text-purple-200 mb-4">Мета-трансформация жизненного сценария:</p>
-            <ol class="list-decimal list-inside space-y-2 text-gray-300 ml-4">
-                <li>Определение истинного запроса клиента</li>
-                <li>Диагностика структуры личности</li>
-                <li>Проработка ограничивающих убеждений</li>
-                <li>Создание новых мотивационных смыслов</li>
-                <li>Формирование персональной стратегии успеха</li>
-                <li>Раскрытие и реализация личностного потенциала</li>
-                <li>Создание структуры мотивации к достижению результатов</li>
-                <li>Формирование структуры мышления победителя</li>
-            </ol>
-            <p class="mt-4 text-gray-300">
-                <strong>8 сессий</strong> с сертифицированным коучем ICF. <br>
-                <span class="text-red-400 line-through">1250 €</span> <span class="text-green-400 font-bold">790 €</span>
-                <br>
-                <span class="text-yellow-300 text-sm">Специальная цена до 15 декабря 2025</span>
-            </p>
-        </div>
-    </div>
-</section>
+                    <div
+                        class="bg-gradient-to-br from-purple-900/40 to-purple-800/30 p-8 rounded-lg border border-purple-400/30">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-400">🧠 Персональный курс LOGO и нейро-коучинга
+                        </h3>
+                        <p class="text-purple-200 mb-4">Мета-трансформация жизненного сценария:</p>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-300 ml-4">
+                            <li>Определение истинного запроса клиента</li>
+                            <li>Диагностика структуры личности</li>
+                            <li>Проработка ограничивающих убеждений</li>
+                            <li>Создание новых мотивационных смыслов</li>
+                            <li>Формирование персональной стратегии успеха</li>
+                            <li>Раскрытие и реализация личностного потенциала</li>
+                            <li>Создание структуры мотивации к достижению результатов</li>
+                            <li>Формирование структуры мышления победителя</li>
+                        </ol>
+                        <p class="mt-4 text-gray-300">
+                            <strong>8 сессий</strong> с сертифицированным коучем ICF. <br>
+                            <span class="text-red-400 line-through">1250 €</span> <span
+                                class="text-green-400 font-bold">790 €</span>
+                            <br>
+                            <span class="text-yellow-300 text-sm">Специальная цена до 15 декабря 2025</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             <!-- Process -->
             <section class="mb-16">
@@ -306,48 +413,58 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Процесс коучинга</h2>
                     <div class="space-y-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">1</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Знакомство и постановка целей</h3>
-                                <p class="text-gray-300">Определение ваших потребностей и ожиданий от персонального коучинга. Создание доверительных отношений.</p>
+                                <p class="text-gray-300">Определение ваших потребностей и ожиданий от персонального
+                                    коучинга. Создание доверительных отношений.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">2</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Исследование текущей ситуации</h3>
-                                <p class="text-gray-300">Анализ вашего положения, ресурсов и препятствий, создание четкой картины вашего пути.</p>
+                                <p class="text-gray-300">Анализ вашего положения, ресурсов и препятствий, создание
+                                    четкой картины вашего пути.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">3</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Разработка плана действий</h3>
-                                <p class="text-gray-300">Создание плана достижения целей с конкретными шагами и временными рамками.</p>
+                                <p class="text-gray-300">Создание плана достижения целей с конкретными шагами и
+                                    временными рамками.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">4</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Реализация и поддержка</h3>
-                                <p class="text-gray-300">Регулярные сессии для отслеживания прогресса и преодоления возможных препятствий. Все под контролем вашего личного коуча.</p>
+                                <p class="text-gray-300">Регулярные сессии для отслеживания прогресса и преодоления
+                                    возможных препятствий. Все под контролем вашего личного коуча.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">5</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Достижение результатов</h3>
-                                <p class="text-gray-300">Закрепление достигнутых результатов и планирование дальнейших шагов для успешного развития.</p>
+                                <p class="text-gray-300">Закрепление достигнутых результатов и планирование дальнейших
+                                    шагов для успешного развития.</p>
                             </div>
                         </div>
                     </div>
@@ -357,12 +474,14 @@
             <!-- Benefits -->
             <section class="mb-16">
                 <div class="max-w-6xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Преимущества онлайн-коучинга</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Преимущества
+                        онлайн-коучинга</h2>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Четкие результаты</h3>
@@ -371,7 +490,8 @@
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Гибкий график</h3>
@@ -380,7 +500,8 @@
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Быстрые изменения</h3>
@@ -389,7 +510,9 @@
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Практические инструменты</h3>
@@ -398,8 +521,11 @@
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Персональный подход</h3>
@@ -408,7 +534,9 @@
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
                             <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Долгосрочный эффект</h3>
@@ -440,7 +568,8 @@
                                 <p class="text-gray-300">10 сессий + материалы</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 mt-6">Первая ознакомительная сессия (30 минут) проводится бесплатно для определения совместимости и постановки целей</p>
+                        <p class="text-gray-400 mt-6">Первая ознакомительная сессия (30 минут) проводится бесплатно для
+                            определения совместимости и постановки целей</p>
                     </div>
                 </div>
             </section>
@@ -473,10 +602,15 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
                     <div class="space-y-2">
-                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
-                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
-                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
-                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                        <a href="/specialists"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Наши
+                            специалисты</a>
+                        <a href="/branches"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
                     </div>
                 </div>
             </div>
@@ -487,12 +621,14 @@
                     Руководитель: Dipl.- Psychologe Maksym Zhurin
                 </p>
                 <p class="text-sm text-text-secondary mt-2">
-                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                    Разработка сайта: <a href="https://codelevator.top"
+                        class="text-accent-gold hover:underline">Codelevator</a>
                 </p>
             </div>
         </div>
     </footer>
-<script src="../main.js" defer></script>
-<script src="../chat-widget.js" defer></script>
+    <script src="../main.js" defer></script>
+    <script src="../chat-widget.js" defer></script>
 </body>
+
 </html>

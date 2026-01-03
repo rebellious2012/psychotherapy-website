@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Семейные психологи для подростков — помощь в кризисе, конфликтах и адаптации | psyhelper.de</title>
-<meta name="description" content="Центр психотерапии и системного коучинга предлагает поддержку от семейных психологов для подростков и их родителей. Работа с конфликтами, тревожностью, низкой самооценкой и кризисами в семье. Анонимно, онлайн, с соблюдением GDPR.">    
- <link rel="icon" href="../favicon.ico" type="image/x-icon">
- <link href="../dist/tailwind.css" rel="stylesheet">
+    <meta name="description"
+        content="Центр психотерапии и системного коучинга предлагает поддержку от семейных психологов для подростков и их родителей. Работа с конфликтами, тревожностью, низкой самооценкой и кризисами в семье. Анонимно, онлайн, с соблюдением GDPR.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="../dist/tailwind.css" rel="stylesheet">
 
     <style>
         body {
             font-family: 'Inter', system-ui, sans-serif;
         }
+
         .hero-bg {
             background-image: url('../hero-bg.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
         }
-        
+
         .mobile-menu.open {
             transform: translateX(0);
         }
-        
+
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        
+
         .accordion-content.open {
             max-height: 500px;
         }
     </style>
 </head>
+
 <body class="bg-gray-900 text-white">
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg border-b border-accent-gold/20">
-         <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
@@ -53,86 +58,146 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-1">
-                    <a href="/" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
-                    <a href="../specialists" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши специалисты</a>
-                    
+                    <a href="/"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Главная</a>
+                    <a href="../specialists"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Наши
+                        специалисты</a>
+
                     <!-- Services Dropdown -->
                     <div class="relative group">
-                        <button class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
+                        <button
+                            class="px-4 py-2 rounded-lg border border-yellow-400/60 bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 transition-all duration-300 flex items-center space-x-1">
                             <span>Услуги</span>
-                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm rounded-lg border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <div class="p-2">
-                                <a href="psychiatrist" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации клинического психолога ОНЛАЙН</a>
-                                <a href="psychologist" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации психолога ОНЛАЙН</a>
-                                <a href="psychotherapy" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия ОНЛАЙН</a>
-                                <a href="alcohol-coding" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Кодирование от алкоголизма в Германии</a>
-                                <a href="expertise" class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Психологическая помощь для подростков</a>
-                                <a href="coaching" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации коуча ОНЛАЙН</a>
-                                <a href="mobbing" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая помощь при моббинге</a>
-                                <a href="sexual-therapy" class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия сексуальных расстройств</a>
+                                <a href="psychiatrist"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации
+                                    клинического психолога ОНЛАЙН</a>
+                                <a href="psychologist"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации
+                                    психолога ОНЛАЙН</a>
+                                <a href="psychotherapy"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия
+                                    ОНЛАЙН</a>
+                                <a href="alcohol-coding"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Кодирование
+                                    от алкоголизма в Германии</a>
+                                <a href="mpu-preparation.html"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Подготовка
+                                    к MPU</a>
+                                <a href="expertise"
+                                    class="block px-4 py-3 rounded-lg bg-yellow-400/20 text-yellow-400 border border-yellow-400/40">Психологическая
+                                    помощь для подростков</a>
+                                <a href="coaching"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Консультации
+                                    коуча ОНЛАЙН</a>
+                                <a href="mobbing"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психологическая
+                                    помощь при моббинге</a>
+                                <a href="sexual-therapy"
+                                    class="block px-4 py-3 rounded-lg text-white hover:bg-white/10 transition-all duration-300">Психотерапия
+                                    сексуальных расстройств</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <a href="../branches" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
-                    <a href="../vacancies" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
-                    <a href="../contact" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
-                    <a href="../impressum" class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
+
+                    <a href="../branches"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Филиалы</a>
+                    <a href="../vacancies"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Вакансии</a>
+                    <a href="../contact"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Контакты</a>
+                    <a href="../impressum"
+                        class="px-4 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">Impressum</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-          <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
+        <div id="mobile-menu"
+            class="mobile-menu fixed top-0 right-0 h-full w-80 bg-primary-bg border-l border-accent-gold/20 lg:hidden z-50">
             <div class="p-4">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-xl font-bold text-accent-gold">Меню</h2>
                     <button id="mobile-menu-close" class="p-2 rounded-lg bg-accent-gold text-primary-bg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
                 </div>
                 <nav class="space-y-2">
-                <a href="/" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
-                <a href="../specialists" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши специалисты</a>
-                
-                <!-- Mobile Services Accordion -->
-                   <div class="accordion-item">
-                        <button class="accordion-trigger w-full text-left px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex justify-between items-center">
+                    <a href="/"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Главная</a>
+                    <a href="../specialists"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Наши
+                        специалисты</a>
+
+                    <!-- Mobile Services Accordion -->
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-trigger w-full text-left px-4 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all border border-white/20 flex justify-between items-center">
                             Услуги
-                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
-                    </button>
+                        </button>
                         <div class="accordion-content mt-2 space-y-1">
-                        <a href="psychiatrist" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации клинического психолога ОНЛАЙН</a>
-                        <a href="psychologist" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации психолога ОНЛАЙН</a>
-                        <a href="psychotherapy" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
-                        <a href="alcohol-coding" class="block px-4 py-2 rounded text-white hover:bg-white/10">Кодирование от алкоголизма в Германии</a>
-                        <a href="expertise" class="block px-4 py-2 rounded bg-yellow-400/20 text-yellow-400">Психологическая помощь для подростков</a>
-                        <a href="coaching" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации коуча ОНЛАЙН</a>
-                        <a href="mobbing" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь при моббинге</a>
-                        <a href="sexual-therapy" class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия сексуальных расстройств</a>
+                            <a href="psychiatrist"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации клинического
+                                психолога ОНЛАЙН</a>
+                            <a href="psychologist"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации психолога
+                                ОНЛАЙН</a>
+                            <a href="psychotherapy"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия ОНЛАЙН</a>
+                            <a href="alcohol-coding"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Кодирование от алкоголизма
+                                в Германии</a>
+                            <a href="mpu-preparation.html"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Подготовка к MPU</a>
+                            <a href="expertise"
+                                class="block px-4 py-2 rounded bg-yellow-400/20 text-yellow-400">Психологическая помощь
+                                для подростков</a>
+                            <a href="coaching" class="block px-4 py-2 rounded text-white hover:bg-white/10">Консультации
+                                коуча ОНЛАЙН</a>
+                            <a href="mobbing"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психологическая помощь при
+                                моббинге</a>
+                            <a href="sexual-therapy"
+                                class="block px-4 py-2 rounded text-white hover:bg-white/10">Психотерапия сексуальных
+                                расстройств</a>
+                        </div>
                     </div>
-                </div>
-                
-                <a href="../branches" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Филиалы</a>
-                <a href="../vacancies" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Вакансии</a>
-                <a href="../contact" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Контакты</a>
-                <a href="../impressum" class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Impressum</a>
-           </nav>
+
+                    <a href="../branches"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Филиалы</a>
+                    <a href="../vacancies"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Вакансии</a>
+                    <a href="../contact"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Контакты</a>
+                    <a href="../impressum"
+                        class="block px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Impressum</a>
+                </nav>
             </div>
         </div>
     </header>
@@ -160,7 +225,9 @@
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Психологическая помощь для подростков</h1>
                 <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
                     Поддержка в переходный период: тревожность, депрессия, буллинг, адаптация в Германии</p>
-                <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'" target="_blank" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
+                <a href="https://wa.me/491788079318?text='Здравствуйте! Я хотел(а) бы записаться на консультацию в Центр психотерапии. Подскажите, пожалуйста, как можно записаться на ближайшее время?'"
+                    target="_blank"
+                    class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors duration-300">
                     ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
                 </a>
             </div>
@@ -173,96 +240,127 @@
             <!-- Service Description -->
             <section class="mb-16">
                 <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">О психологической помощи для подростков</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400">О психологической помощи для
+                        подростков</h2>
                     <div class="prose prose-lg text-gray-300 space-y-6">
                         <p>
-                            Подростковый возраст — сложный период, наполненный внутренними конфликтами, поиском себя, давлением извне. Мы помогаем подросткам справляться с тревожностью, низкой самооценкой, депрессией, трудностями в общении и адаптацией к новой стране и школе.</p>
+                            Подростковый возраст — сложный период, наполненный внутренними конфликтами, поиском себя,
+                            давлением извне. Мы помогаем подросткам справляться с тревожностью, низкой самооценкой,
+                            депрессией, трудностями в общении и адаптацией к новой стране и школе.</p>
                         <p>
-                            Наши психологи специализируются на работе с подростками от 12 до 18 лет и используют подходы, учитывающие возрастные особенности. Мы помогаем не только "вылечить", но и научить подростка понимать свои эмоции, строить здоровые отношения и справляться со стрессом.&nbsp;Если ваш ребенок стал замкнутым, агрессивным, потерял интерес к учёбе или переживает из-за буллинга — психологическая помощь может стать первым шагом к восстановлению его внутреннего равновесия. Мы работаем онлайн, что особенно удобно для семей, живущих в Германии, Австрии, Швейцарии и других странах ЕС.</p>
+                            Наши психологи специализируются на работе с подростками от 12 до 18 лет и используют
+                            подходы, учитывающие возрастные особенности. Мы помогаем не только "вылечить", но и научить
+                            подростка понимать свои эмоции, строить здоровые отношения и справляться со
+                            стрессом.&nbsp;Если ваш ребенок стал замкнутым, агрессивным, потерял интерес к учёбе или
+                            переживает из-за буллинга — психологическая помощь может стать первым шагом к восстановлению
+                            его внутреннего равновесия. Мы работаем онлайн, что особенно удобно для семей, живущих в
+                            Германии, Австрии, Швейцарии и других странах ЕС.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Types of Expertise -->
-           <section class="mb-16">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Направления помощи</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Направления помощи</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- 1. Адаптация к жизни в Германии -->
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                          </svg>
+                        <!-- 1. Адаптация к жизни в Германии -->
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Адаптация к жизни в Германии</h3>
+                            <p class="text-gray-300">Помогаем подростку справиться с культурным шоком, языковым барьером
+                                и трудностями в школе. Работаем с чувством изоляции, страхом быть "другим" и конфликтом
+                                между родной культурой и новой средой.</p>
+                        </div>
+
+                        <!-- 2. Тревожность и панические атаки -->
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M8 12c0 2.21 1.79 4 4 4s4-1.79 4-4-1.79-4-4-4-4 1.79-4 4z" opacity="0.3" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Тревожность и панические атаки</h3>
+                            <p class="text-gray-300">Поддерживаем подростка при постоянной тревоге, страхах и приступах
+                                паники. Учим техникам дыхания, саморегуляции и когнитивной переработки тревожных мыслей.
+                            </p>
+                        </div>
+
+                        <!-- 3. Постоянное напряжение, страхи, фобии -->
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Работа с постоянным напряжением, страхами,
+                                фобиями, мыслями о неудаче.</h3>
+                            <p class="text-gray-300">Помогаем снять хроническое напряжение и справиться с навязчивыми
+                                страхами. Работаем с низкой самооценкой и установками вроде "я должен быть идеальным".
+                            </p>
+                        </div>
+
+                        <!-- 4. Утрата интереса к жизни -->
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m6 5a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M12 6V4m0 16v-2" opacity="0.6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Поддержка при утрате интереса к жизни,
+                                снижении энергии, мыслях о бессмысленности.</h3>
+                            <p class="text-gray-300">Помогаем подростку выйти из состояния апатии и безнадежности.
+                                Поддерживаем в период депрессии, работаем с мотивацией и поиском смысла.</p>
+                        </div>
+
+                        <!-- 5. Буллинг и социальная тревожность -->
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M12 14v-2" opacity="0.6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Буллинг и социальная тревожность</h3>
+                            <p class="text-gray-300">Помогаем восстановиться после травли в школе или онлайн. Работаем
+                                со страхом общения, стеснением и избеганием социальных ситуаций.</p>
+                        </div>
+
+                        <!-- 6. СДВГ и другие диагнозы -->
+                        <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"
+                                        opacity="0.4" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M12 9l-2 2 2 2 2-2-2-2z" opacity="0.6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Поддержка при СДВГ и других диагнозах</h3>
+                            <p class="text-gray-300">Обучаем навыкам концентрации, тайм-менеджмента и саморегуляции.
+                                Помогаем справляться с импульсивностью и трудностями в учёбе без фокуса на диагнозе.</p>
+                        </div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Адаптация к жизни в Германии</h3>
-                <p class="text-gray-300">Помогаем подростку справиться с культурным шоком, языковым барьером и трудностями в школе. Работаем с чувством изоляции, страхом быть "другим" и конфликтом между родной культурой и новой средой.</p>
-            </div>
-
-            <!-- 2. Тревожность и панические атаки -->
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 12c0 2.21 1.79 4 4 4s4-1.79 4-4-1.79-4-4-4-4 1.79-4 4z" opacity="0.3"/>
-                           </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Тревожность и панические атаки</h3>
-                <p class="text-gray-300">Поддерживаем подростка при постоянной тревоге, страхах и приступах паники. Учим техникам дыхания, саморегуляции и когнитивной переработки тревожных мыслей.</p>
-            </div>
-
-            <!-- 3. Постоянное напряжение, страхи, фобии -->
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                             </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Работа с постоянным напряжением, страхами, фобиями, мыслями о неудаче.</h3>
-                <p class="text-gray-300">Помогаем снять хроническое напряжение и справиться с навязчивыми страхами. Работаем с низкой самооценкой и установками вроде "я должен быть идеальным".</p>
-            </div>
-
-            <!-- 4. Утрата интереса к жизни -->
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m6 5a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 16v-2" opacity="0.6"/>
-                              </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Поддержка при утрате интереса к жизни, снижении энергии, мыслях о бессмысленности.</h3>
-                <p class="text-gray-300">Помогаем подростку выйти из состояния апатии и безнадежности. Поддерживаем в период депрессии, работаем с мотивацией и поиском смысла.</p>
-            </div>
-
-            <!-- 5. Буллинг и социальная тревожность -->
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14v-2" opacity="0.6"/>
-                           </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Буллинг и социальная тревожность</h3>
-                <p class="text-gray-300">Помогаем восстановиться после травли в школе или онлайн. Работаем со страхом общения, стеснением и избеганием социальных ситуаций.</p>
-            </div>
-
-            <!-- 6. СДВГ и другие диагнозы -->
-            <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20">
-                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 9l-2 2 2 2 2-2-2-2z" opacity="0.6"/>
-                             </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Поддержка при СДВГ и других диагнозах</h3>
-                <p class="text-gray-300">Обучаем навыкам концентрации, тайм-менеджмента и саморегуляции. Помогаем справляться с импульсивностью и трудностями в учёбе без фокуса на диагнозе.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
+            </section>
 
 
             <!-- Process -->
@@ -271,48 +369,59 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Этапы работы</h2>
                     <div class="space-y-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">1</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Первичная консультация</h3>
-                                <p class="text-gray-300">Мы знакомимся с ситуацией, выслушиваем родителей и подростка, определяем цели терапии.</p>
+                                <p class="text-gray-300">Мы знакомимся с ситуацией, выслушиваем родителей и подростка,
+                                    определяем цели терапии.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">2</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Диагностика и постановка задач</h3>
-                                <p class="text-gray-300">Проводим клиническое интервью, используем тесты и проективные методы для понимания внутреннего мира подростка.</p>
+                                <p class="text-gray-300">Проводим клиническое интервью, используем тесты и проективные
+                                    методы для понимания внутреннего мира подростка.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">3</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Психотерапия</h3>
-                                <p class="text-gray-300">Регулярные сессии (онлайн) с использованием когнитивно-поведенческой, гештальт или системной терапии. Учитываем возраст, интересы, стиль общения.</p>
+                                <p class="text-gray-300">Регулярные сессии (онлайн) с использованием
+                                    когнитивно-поведенческой, гештальт или системной терапии. Учитываем возраст,
+                                    интересы, стиль общения.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">4</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Работа с родителями</h3>
-                                <p class="text-gray-300">Подготовка экспертного заключения на немецком языке с выводами и рекомендациями, которые будут использоваться в судебных или медицинских целях</p>
+                                <p class="text-gray-300">Подготовка экспертного заключения на немецком языке с выводами
+                                    и рекомендациями, которые будут использоваться в судебных или медицинских целях</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-black font-bold">5</span>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Оценка прогресса и завершение</h3>
-                                <p class="text-gray-300">Мы отслеживаем изменения, корректируем подход и помогаем подростку закрепить навыки самостоятельной работы с эмоциями.</p>
+                                <p class="text-gray-300">Мы отслеживаем изменения, корректируем подход и помогаем
+                                    подростку закрепить навыки самостоятельной работы с эмоциями.</p>
                             </div>
                         </div>
                     </div>
@@ -325,41 +434,58 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-yellow-400 text-center">Методы работы</h2>
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20 text-center">
-                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                            <div
+                                class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4 mx-auto">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-semibold mb-2 text-white">Клиническая беседа</h3>
-                            <p class="text-gray-300 text-sm">Открытый диалог в безопасной атмосфере, адаптированный под возраст.</p>
+                            <p class="text-gray-300 text-sm">Открытый диалог в безопасной атмосфере, адаптированный под
+                                возраст.</p>
                         </div>
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20 text-center">
-                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                            <div
+                                class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4 mx-auto">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-semibold mb-2 text-white">Проективные методы</h3>
-                            <p class="text-gray-300 text-sm">Рисунки, сказки, ассоциативные карты — помогают выразить то, что сложно сказать словами.</p>
+                            <p class="text-gray-300 text-sm">Рисунки, сказки, ассоциативные карты — помогают выразить
+                                то, что сложно сказать словами.</p>
                         </div>
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20 text-center">
-                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                            <div
+                                class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4 mx-auto">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-semibold mb-2 text-white">Когнитивно-поведенческие техники</h3>
-                            <p class="text-gray-300 text-sm">Обучение распознаванию негативных мыслей, работе с тревогой и стрессом.</p>
+                            <p class="text-gray-300 text-sm">Обучение распознаванию негативных мыслей, работе с тревогой
+                                и стрессом.</p>
                         </div>
                         <div class="bg-black/30 p-6 rounded-lg border border-yellow-400/20 text-center">
-                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                            <div
+                                class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4 mx-auto">
                                 <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-semibold mb-2 text-white">Семейная терапия</h3>
-                            <p class="text-gray-300 text-sm">Работа с динамикой семьи, особенно при конфликтах между поколениями и культурами.</p>
+                            <p class="text-gray-300 text-sm">Работа с динамикой семьи, особенно при конфликтах между
+                                поколениями и культурами.</p>
                         </div>
                     </div>
                 </div>
@@ -374,7 +500,8 @@
                             <div>
                                 <h3 class="text-xl font-semibold mb-4 text-white">Первая консультация</h3>
                                 <p class="text-3xl font-bold text-yellow-400 mb-2">€75</p>
-                                <p class="text-gray-300">Знакомство, обсуждение проблемы, определение направления работы</p>
+                                <p class="text-gray-300">Знакомство, обсуждение проблемы, определение направления работы
+                                </p>
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold mb-4 text-white">3 сессии по 50мин</h3>
@@ -382,12 +509,14 @@
                                 <p class="text-gray-300">Комплексное исследование</p>
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold mb-4 text-white">Индивидуальная терапия с подростком</h3>
+                                <h3 class="text-xl font-semibold mb-4 text-white">Индивидуальная терапия с подростком
+                                </h3>
                                 <p class="text-3xl font-bold text-yellow-400 mb-2">€320</p>
                                 <p class="text-gray-300">Ускоренные сроки от 5 сессий</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 mt-6">Все сессии проводятся онлайн. Возможна оплата по банковскому переводу, PayPal или картой. Для студентов и многодетных семей — скидки.</p>
+                        <p class="text-gray-400 mt-6">Все сессии проводятся онлайн. Возможна оплата по банковскому
+                            переводу, PayPal или картой. Для студентов и многодетных семей — скидки.</p>
                     </div>
                 </div>
             </section>
@@ -420,10 +549,15 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-accent-gold">Быстрые ссылки</h4>
                     <div class="space-y-2">
-                        <a href="/specialists" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши специалисты</a>
-                        <a href="/branches" class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
-                        <a href="/datenschutz" class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
-                        <a href="/impressum" class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
+                        <a href="/specialists"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Наши
+                            специалисты</a>
+                        <a href="/branches"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Наши филиалы</a>
+                        <a href="/datenschutz"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">DATENSCHUTZ</a>
+                        <a href="/impressum"
+                            class="block text-text-secondary hover:text-accent-gold transition-colors">Impressum</a>
                     </div>
                 </div>
             </div>
@@ -434,12 +568,14 @@
                     Руководитель: Dipl.- Psychologe Maksym Zhurin
                 </p>
                 <p class="text-sm text-text-secondary mt-2">
-                    Разработка сайта: <a href="https://codelevator.top" class="text-accent-gold hover:underline">Codelevator</a>
+                    Разработка сайта: <a href="https://codelevator.top"
+                        class="text-accent-gold hover:underline">Codelevator</a>
                 </p>
             </div>
         </div>
     </footer>
-<script src="../main.js" defer></script>
-<script src="../chat-widget.js" defer></script>
+    <script src="../main.js" defer></script>
+    <script src="../chat-widget.js" defer></script>
 </body>
+
 </html>
